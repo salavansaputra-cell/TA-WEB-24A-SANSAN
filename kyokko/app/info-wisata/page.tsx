@@ -69,6 +69,8 @@ export default function InfoWisataPage() {
   alt={item.title}
   className="w-full h-64 object-cover"
 />
+<div className="p-6">
+</div>
   </div>
 ))}
 
