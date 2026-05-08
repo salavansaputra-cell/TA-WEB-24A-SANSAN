@@ -1,4 +1,10 @@
-const wisata = [];
+const wisata = [
+  {
+    title: "Tiket Masuk",
+    weekday: "Rp80.000",
+    weekend: "Rp100.000",
+  },
+];
 
 export default function InfoWisataPage() {
   return (
