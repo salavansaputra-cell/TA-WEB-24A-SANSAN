@@ -68,7 +68,9 @@ export default function FacilitiesPage() {
             />
 
             <div className="p-6">
-              <h2>{item.title}</h2>
+              <h2 className="text-2xl font-bold mb-3">
+                {item.title}
+              </h2>
             </div>
           </div>
         ))}
