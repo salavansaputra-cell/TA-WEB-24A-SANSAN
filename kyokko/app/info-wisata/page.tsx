@@ -18,6 +18,10 @@ const wisata = [
   image: "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
 
 desc: "Nikmati pengalaman snorkeling dengan panorama laut yang indah.",
+include: [
+  "Peralatan Snorkeling",
+  "Area Laut Wisata",
+]
 }
 
 
