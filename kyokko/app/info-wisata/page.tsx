@@ -21,6 +21,11 @@ desc: "Nikmati pengalaman snorkeling dengan panorama laut yang indah.",
 include: [
   "Peralatan Snorkeling",
   "Area Laut Wisata",
+  {
+  title: "Paddle Board",
+  weekday: "Rp40.000",
+  weekend: "Rp60.000",
+}
 ]
 }
 
