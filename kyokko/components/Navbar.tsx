@@ -59,6 +59,29 @@ export default function Navbar() {
           ☰
         </button>
       </div>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="md:hidden bg-black/90 px-6 pb-6">
+          <ul className="flex flex-col gap-4 text-lg">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+
+            <li>
+              <Link href="/facilities">Facilities</Link>
+            </li>
+
+            <li>
+              <Link href="/info-wisata">Info Wisata</Link>
+            </li>
+
+            <li>
+              <Link href="/reservasi">Reservasi</Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
