@@ -66,6 +66,9 @@ export default function FacilitiesPage() {
               alt={item.title}
               className="w-full h-64 object-cover"
             />
+
+            <div>
+            </div>
           </div>
         ))}
       </div>
