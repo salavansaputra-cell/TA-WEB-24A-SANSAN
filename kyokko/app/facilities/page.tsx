@@ -56,6 +56,9 @@ export default function FacilitiesPage() {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {facilities.map((item, index) => (
+          <div key={index}></div>
+        ))}
       </div>
     </div>
   );
