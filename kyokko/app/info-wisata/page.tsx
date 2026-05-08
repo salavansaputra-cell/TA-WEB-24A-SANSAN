@@ -77,9 +77,19 @@ export default function InfoWisataPage() {
 <p className="text-gray-600 mb-5">
   {item.desc}
 </p>
+<div className="space-y-3 mb-5">
+  <div className="bg-blue-100 p-3 rounded-lg">
+    Weekday: {item.weekday}
+  </div>
+
+  <div className="bg-pink-100 p-3 rounded-lg">
+    Weekend: {item.weekend}
+  </div>
+</div>
 </div>
   </div>
 ))}
+
 
 </div>
     </div>
