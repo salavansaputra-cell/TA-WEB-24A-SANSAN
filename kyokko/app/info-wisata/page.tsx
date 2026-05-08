@@ -85,6 +85,11 @@ export default function InfoWisataPage() {
   <div className="bg-pink-100 p-3 rounded-lg">
     Weekend: {item.weekend}
   </div>
+  <div>
+  <h3 className="font-semibold mb-3">
+    Include:
+  </h3>
+</div>
 </div>
 </div>
   </div>
