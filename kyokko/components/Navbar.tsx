@@ -65,19 +65,33 @@ export default function Navbar() {
         <div className="md:hidden bg-black/90 px-6 pb-6">
           <ul className="flex flex-col gap-4 text-lg">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
             </li>
 
             <li>
-              <Link href="/facilities">Facilities</Link>
+              <Link href="/facilities" onClick={() => setMenuOpen(false)}>
+                Facilities
+              </Link>
             </li>
 
             <li>
-              <Link href="/info-wisata">Info Wisata</Link>
+              <Link href="/info-wisata" onClick={() => setMenuOpen(false)}>
+                Info Wisata
+              </Link>
             </li>
 
             <li>
-              <Link href="/reservasi">Reservasi</Link>
+              <Link href="/reservasi" onClick={() => setMenuOpen(false)}>
+                Reservasi
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/login" onClick={() => setMenuOpen(false)}>
+                Login
+              </Link>
             </li>
           </ul>
         </div>
