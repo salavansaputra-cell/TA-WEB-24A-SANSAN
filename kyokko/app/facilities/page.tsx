@@ -59,7 +59,7 @@ export default function FacilitiesPage() {
         {facilities.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl"
+            className="bg-white rounded-2xl shadow-md"
           >
           </div>
         ))}
