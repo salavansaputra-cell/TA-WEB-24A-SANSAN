@@ -14,7 +14,12 @@ const wisata = [
   title: "Snorkeling",
   weekday: "Rp50.000",
   weekend: "Rp75.000",
+
+  image: "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
+
+desc: "Nikmati pengalaman snorkeling dengan panorama laut yang indah.",
 }
+
 
 ],
 
