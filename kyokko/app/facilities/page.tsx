@@ -67,7 +67,7 @@ export default function FacilitiesPage() {
               className="w-full h-64 object-cover"
             />
 
-            <div>
+            <div className="p-6">
             </div>
           </div>
         ))}
