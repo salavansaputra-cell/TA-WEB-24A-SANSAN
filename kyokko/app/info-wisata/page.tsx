@@ -54,6 +54,9 @@ export default function InfoWisataPage() {
   Kyokko Beach.
 </p>
 </div>
+
+<div className="mb-20">
+</div>
     </div>
   );
 }
