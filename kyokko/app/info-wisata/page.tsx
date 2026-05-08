@@ -25,6 +25,10 @@ include: [
   title: "Paddle Board",
   weekday: "Rp40.000",
   weekend: "Rp60.000",
+
+  image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+
+desc: "Aktivitas paddle board seru bersama teman dan keluarga.",
 }
 ]
 }
