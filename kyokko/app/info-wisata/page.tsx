@@ -63,7 +63,12 @@ export default function InfoWisataPage() {
 
 <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
     {wisata.map((item, index) => (
-  <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-md">
+  <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-md" >
+    <img
+  src={item.image}
+  alt={item.title}
+  className="w-full h-64 object-cover"
+/>
   </div>
 ))}
 
