@@ -5,6 +5,12 @@ const wisata = [
     weekend: "Rp100.000",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
     desc: "Tiket masuk sudah termasuk welcome drink dan akses fasilitas premium Kyokko Beach.",
+
+    include: [
+  "Welcome Drink",
+  "Bean Bag",
+],
+
   },
 ];
 
