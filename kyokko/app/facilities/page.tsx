@@ -54,6 +54,9 @@ export default function FacilitiesPage() {
           Nikmati berbagai fasilitas premium Kyokko Beach.
         </p>
       </div>
+
+      <div className="max-w-6xl mx-auto">
+      </div>
     </div>
   );
 }
