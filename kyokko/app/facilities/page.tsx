@@ -1,4 +1,11 @@
-const facilities = [];
+const facilities = [
+  {
+    title: "Bean Bag Area",
+    desc: "Area santai dengan bean bag nyaman.",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+  },
+];
 
 export default function FacilitiesPage() {
   return (
