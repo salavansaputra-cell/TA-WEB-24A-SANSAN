@@ -19,6 +19,13 @@ const facilities = [
     image:
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
   },
+
+  {
+    title: "Toilet & Kamar Bilas",
+    desc: "Toilet dan kamar bilas modern.",
+    image:
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206",
+  },
 ];
 
 export default function FacilitiesPage() {
