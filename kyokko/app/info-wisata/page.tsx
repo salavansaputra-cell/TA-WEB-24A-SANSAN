@@ -1,6 +1,6 @@
 export default function InfoWisataPage() {
   return (
-    <div>
+     <div className="min-h-screen bg-gray-100">
     </div>
   );
 }
