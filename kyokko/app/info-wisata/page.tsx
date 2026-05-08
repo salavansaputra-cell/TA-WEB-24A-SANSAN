@@ -3,6 +3,7 @@ const wisata = [
     title: "Tiket Masuk",
     weekday: "Rp80.000",
     weekend: "Rp100.000",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
   },
 ];
 
