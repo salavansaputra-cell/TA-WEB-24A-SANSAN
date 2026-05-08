@@ -5,6 +5,13 @@ const facilities = [
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
   },
+
+  {
+    title: "Gazebo & Saung",
+    desc: "Gazebo gratis tersedia untuk bersantai.",
+    image:
+      "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
+  },
 ];
 
 export default function FacilitiesPage() {
