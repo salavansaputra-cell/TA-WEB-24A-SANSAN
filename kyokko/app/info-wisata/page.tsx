@@ -9,10 +9,18 @@ const wisata = [
     include: [
   "Welcome Drink",
   "Bean Bag",
+
+  {
+  title: "Snorkeling",
+  weekday: "Rp50.000",
+  weekend: "Rp75.000",
+}
+
 ],
 
   },
 ];
+
 
 export default function InfoWisataPage() {
   return (
