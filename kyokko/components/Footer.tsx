@@ -17,6 +17,23 @@ export default function Footer() {
 
         </div>
 
+        {/* MENU */}
+        <div>
+
+          <h3 className="text-xl font-semibold mb-3">
+            Menu
+          </h3>
+
+          <ul className="space-y-2 text-gray-400">
+
+            <li>Home</li>
+            <li>Facilities</li>
+            <li>Reservasi</li>
+
+          </ul>
+
+        </div>
+
       </div>
 
     </footer>
