@@ -60,6 +60,9 @@ export default function InfoWisataPage() {
   Aktivitas Wisata 🎟️
 </h2>
 </div>
+
+<div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+</div>
     </div>
   );
 }
