@@ -33,6 +33,13 @@ const facilities = [
     image:
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda",
   },
+
+  {
+    title: "Beach Club Area",
+    desc: "Area beach club aesthetic dan santai.",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+  },
 ];
 
 export default function FacilitiesPage() {
