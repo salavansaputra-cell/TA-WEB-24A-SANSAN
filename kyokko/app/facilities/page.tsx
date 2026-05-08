@@ -12,6 +12,13 @@ const facilities = [
     image:
       "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
   },
+
+  {
+    title: "Welcome Drink",
+    desc: "Setiap tiket masuk mendapatkan minuman gratis.",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+  },
 ];
 
 export default function FacilitiesPage() {
