@@ -70,6 +70,13 @@ export default function InfoWisataPage() {
   className="w-full h-64 object-cover"
 />
 <div className="p-6">
+    <h2 className="text-2xl font-bold mb-3">
+  {item.title}
+</h2>
+
+<p className="text-gray-600 mb-5">
+  {item.desc}
+</p>
 </div>
   </div>
 ))}
