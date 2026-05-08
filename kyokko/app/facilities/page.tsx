@@ -26,6 +26,13 @@ const facilities = [
     image:
       "https://images.unsplash.com/photo-1519046904884-53103b34b206",
   },
+
+  {
+    title: "Musholla",
+    desc: "Musholla nyaman tersedia untuk pengunjung.",
+    image:
+      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda",
+  },
 ];
 
 export default function FacilitiesPage() {
