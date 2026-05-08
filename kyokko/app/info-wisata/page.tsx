@@ -56,6 +56,9 @@ export default function InfoWisataPage() {
 </div>
 
 <div className="mb-20">
+    <h2 className="text-3xl font-bold mb-8 text-center">
+  Aktivitas Wisata 🎟️
+</h2>
 </div>
     </div>
   );
