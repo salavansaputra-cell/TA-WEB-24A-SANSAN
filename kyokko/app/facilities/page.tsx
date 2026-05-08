@@ -59,7 +59,7 @@ export default function FacilitiesPage() {
         {facilities.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md overflow-hidden"
+            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition"
           >
           </div>
         ))}
