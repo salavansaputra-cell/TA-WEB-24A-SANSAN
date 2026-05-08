@@ -29,6 +29,10 @@ include: [
   image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
 
 desc: "Aktivitas paddle board seru bersama teman dan keluarga.",
+include: [
+  "Paddle Board",
+  "Pelampung",
+]
 }
 ]
 }
