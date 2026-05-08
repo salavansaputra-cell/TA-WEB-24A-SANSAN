@@ -20,6 +20,16 @@ export default function Navbar() {
           <li>
             <Link href="/info-wisata">Info Wisata</Link>
           </li>
+
+          <li>
+            <Link href="/reservasi">Reservasi</Link>
+          </li>
+
+          <li>
+            <Link href="/login" className="bg-blue-500 px-4 py-2 rounded-lg">
+              Login
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
