@@ -11,7 +11,6 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/30"></div>
 
-        {/* CONTENT */}
         <div className="relative z-10 text-center text-white max-w-2xl">
           <p className="uppercase tracking-[6px] text-sm text-blue-200 mb-4">
             Welcome to
@@ -20,6 +19,17 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Kyokko Beach 🌊
           </h1>
+
+          <p className="text-lg text-gray-200 leading-relaxed mb-8">
+            Beach club modern dengan suasana tropis.
+          </p>
+
+          <a
+            href="/reservasi"
+            className="bg-blue-500 px-7 py-3 rounded-xl font-medium hover:bg-blue-600 transition duration-300 inline-block"
+          >
+            Reservasi Sekarang
+          </a>
         </div>
       </section>
     </main>
