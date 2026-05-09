@@ -68,6 +68,42 @@ export default function Home() {
             Informasi singkat mengenai Kyokko Beach.
           </p>
         </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* LOKASI */}
+          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition duration-300 text-center">
+            <div className="text-4xl mb-4">📍</div>
+
+            <h3 className="text-xl font-bold mb-3">Lokasi</h3>
+
+            <p className="text-gray-600">
+              Kyokko Beach, Teluk Pandan, Pesawaran, Lampung
+            </p>
+          </div>
+
+          {/* TIKET */}
+          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition duration-300 text-center">
+            <div className="text-4xl mb-4">💰</div>
+
+            <h3 className="text-xl font-bold mb-3">Tiket Masuk</h3>
+
+            <p className="text-gray-600 mb-2">Weekday: Rp80.000</p>
+
+            <p className="text-gray-600">Weekend: Rp100.000</p>
+          </div>
+
+          {/* DAYA TARIK */}
+          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition duration-300 text-center">
+            <div className="text-4xl mb-4">🌅</div>
+
+            <h3 className="text-xl font-bold mb-3">Daya Tarik</h3>
+
+            <p className="text-gray-600 leading-relaxed">
+              Sunset aesthetic, snorkeling, beach lounge modern, dan penginapan
+              tropis nyaman.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
