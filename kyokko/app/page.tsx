@@ -8,7 +8,10 @@ export default function Home() {
           backgroundImage:
             "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')",
         }}
-      ></section>
+      >
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </section>
     </main>
   );
 }
