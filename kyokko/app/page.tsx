@@ -32,6 +32,15 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* ABOUT SECTION */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5">
+            Tentang Kyokko Beach 🌴
+          </h2>
+        </div>
+      </section>
     </main>
   );
 }
