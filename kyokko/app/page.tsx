@@ -56,6 +56,19 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* INFORMASI SECTION */}
+      <section className="bg-gray-100 py-16 px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+            Informasi Wisata 🎟️
+          </h2>
+
+          <p className="text-gray-600">
+            Informasi singkat mengenai Kyokko Beach.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
