@@ -9,8 +9,10 @@ export default function Home() {
             "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')",
         }}
       >
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/30"></div>
 
+        {/* CONTENT */}
         <div className="relative z-10 text-center text-white max-w-2xl">
           <p className="uppercase tracking-[6px] text-sm text-blue-200 mb-4">
             Welcome to
@@ -21,7 +23,8 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-gray-200 leading-relaxed mb-8">
-            Beach club modern dengan suasana tropis.
+            Beach club modern dengan suasana tropis, sunset aesthetic, dan
+            pengalaman liburan premium di Lampung.
           </p>
 
           <a
@@ -39,6 +42,18 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-5">
             Tentang Kyokko Beach 🌴
           </h2>
+
+          <p className="text-gray-600 leading-relaxed mb-5">
+            Kyokko Beach merupakan destinasi wisata modern di Lampung dengan
+            konsep beach club yang nyaman dan aesthetic untuk menikmati suasana
+            pantai tropis.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed">
+            Dengan bean bag, gazebo, welcome drink, aktivitas wisata air, dan
+            penginapan nyaman, Kyokko Beach menjadi tempat terbaik untuk
+            bersantai bersama keluarga maupun teman.
+          </p>
         </div>
       </section>
     </main>
