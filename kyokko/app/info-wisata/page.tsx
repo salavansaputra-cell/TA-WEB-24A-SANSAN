@@ -16,16 +16,14 @@ const wisata = [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
 
     desc:
-      "Tiket masuk sudah termasuk welcome drink dan akses fasilitas premium Kyokko Beach.",
+      "Tiket masuk sudah termasuk welcome drink, bean bag, gazebo, kursi santai, toilet, musholla, dan akses beach club.",
 
     include: [
       "Welcome Drink",
       "Bean Bag",
       "Gazebo",
-      "Kursi Santai",
+      "Beach Lounge",
       "Toilet & Kamar Bilas",
-      "Musholla",
-      "Akses Beach Club",
     ],
   },
 
@@ -34,15 +32,15 @@ const wisata = [
     weekday: 50000,
     weekend: 75000,
     image:
-      "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
 
     desc:
-      "Nikmati pengalaman snorkeling dengan panorama laut yang indah.",
+      "Nikmati pengalaman snorkeling dengan panorama bawah laut yang indah.",
 
     include: [
       "Peralatan Snorkeling",
-      "Area Laut Wisata",
-      "Spot Foto Laut",
+      "Spot Laut",
+      "Pendamping",
     ],
   },
 
@@ -51,10 +49,10 @@ const wisata = [
     weekday: 40000,
     weekend: 60000,
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      "https://images.unsplash.com/photo-1521335629791-ce4aec67dd53",
 
     desc:
-      "Aktivitas paddle board seru bersama teman dan keluarga.",
+      "Aktivitas paddle board seru untuk menikmati suasana pantai.",
 
     include: [
       "Paddle Board",
@@ -69,30 +67,30 @@ const penginapan = [
     title: "Standard Room",
     price: 350000,
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945",
 
     desc:
-      "Kamar nyaman dengan fasilitas lengkap untuk 2 orang.",
+      "Kamar nyaman untuk pasangan atau keluarga kecil.",
   },
 
   {
     title: "Deluxe Room",
     price: 550000,
     image:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
 
     desc:
-      "Kamar luas dengan suasana modern dan view pantai.",
+      "Kamar luas dengan desain modern dekat pantai.",
   },
 
   {
     title: "Private Villa",
     price: 1200000,
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
 
     desc:
-      "Villa private premium dengan suasana tropis eksklusif.",
+      "Villa private eksklusif dengan pengalaman menginap mewah.",
   },
 ];
 
@@ -126,9 +124,9 @@ export default function InfoWisataPage() {
           Info Wisata Kyokko Beach 🌊
         </h1>
 
-        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-          Nikmati berbagai aktivitas wisata dan penginapan terbaik di
-          Kyokko Beach bersama keluarga maupun teman.
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+          Nikmati berbagai aktivitas wisata dan penginapan terbaik di Kyokko
+          Beach.
         </p>
       </section>
 
@@ -149,28 +147,24 @@ export default function InfoWisataPage() {
                 shadow
                 hover:shadow-xl
                 transition
-                duration-300
               "
             >
-              {/* IMAGE */}
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-64 object-cover"
               />
 
-              {/* CONTENT */}
               <div className="p-6">
                 <h2 className="text-2xl font-semibold mb-3">
                   {item.title}
                 </h2>
 
-                <p className="text-gray-600 mb-5">
+                <p className="text-gray-600 mb-4">
                   {item.desc}
                 </p>
 
-                {/* PRICE */}
-                <div className="space-y-3 mb-5">
+                <div className="mb-4 space-y-2">
                   <div className="bg-blue-100 rounded-lg p-3">
                     Weekday: Rp
                     {item.weekday.toLocaleString("id-ID")}
@@ -182,30 +176,27 @@ export default function InfoWisataPage() {
                   </div>
                 </div>
 
-                {/* INCLUDE */}
                 <div className="mb-5">
-                  <h3 className="font-semibold mb-3">
+                  <h3 className="font-semibold mb-2">
                     Include:
                   </h3>
 
-                  <ul className="space-y-2">
-                    {item.include.map((inc, i) => (
-                      <li
-                        key={i}
-                        className="
-                          bg-gray-100
-                          rounded-lg
-                          p-2
-                          text-sm
-                        "
-                      >
-                        ✅ {inc}
-                      </li>
-                    ))}
-                  </ul>
+                  {item.include.map((inc, i) => (
+                    <div
+                      key={i}
+                      className="
+                        bg-gray-100
+                        rounded-lg
+                        p-2
+                        mb-2
+                        text-sm
+                      "
+                    >
+                      ✅ {inc}
+                    </div>
+                  ))}
                 </div>
 
-                {/* BUTTON */}
                 <button
                   onClick={() =>
                     addToReservasi({
@@ -248,17 +239,14 @@ export default function InfoWisataPage() {
                 shadow
                 hover:shadow-xl
                 transition
-                duration-300
               "
             >
-              {/* IMAGE */}
               <img
                 src={room.image}
                 alt={room.title}
                 className="w-full h-64 object-cover"
               />
 
-              {/* CONTENT */}
               <div className="p-6">
                 <h2 className="text-2xl font-semibold mb-3">
                   {room.title}
@@ -268,9 +256,29 @@ export default function InfoWisataPage() {
                   {room.desc}
                 </p>
 
-                <div className="text-2xl font-bold text-blue-500">
+                <div className="text-2xl font-bold text-blue-500 mb-5">
                   Rp{room.price.toLocaleString("id-ID")} / malam
                 </div>
+
+                <button
+                  onClick={() =>
+                    addToReservasi({
+                      name: room.title,
+                      price: room.price,
+                    })
+                  }
+                  className="
+                    w-full
+                    bg-blue-500
+                    text-white
+                    py-3
+                    rounded-xl
+                    hover:bg-blue-600
+                    transition
+                  "
+                >
+                  Tambah ke Reservasi
+                </button>
               </div>
             </div>
           ))}
