@@ -1,5 +1,5 @@
-// COMMIT 6
-// git commit -m "memperhalus tampilan card dan section home"
+// COMMIT 7
+// git commit -m "update background hero"
 
 import Link from "next/link";
 
@@ -10,7 +10,8 @@ export default function Home() {
       <section
         className="h-screen bg-cover bg-center relative flex items-center justify-center"
         style={{
-          backgroundImage: "url('/images/pantai.jpg')",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')",
         }}
       >
         {/* overlay */}
@@ -66,6 +67,7 @@ export default function Home() {
       {/* INFO CARD */}
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          {/* LOKASI */}
           <div
             className="
               bg-white
@@ -86,6 +88,7 @@ export default function Home() {
             </p>
           </div>
 
+          {/* TIKET */}
           <div
             className="
               bg-white
@@ -106,6 +109,7 @@ export default function Home() {
             <p className="text-gray-600">Weekend Rp100.000</p>
           </div>
 
+          {/* DAYA TARIK */}
           <div
             className="
               bg-white
@@ -122,7 +126,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-3">Daya Tarik</h3>
 
             <p className="text-gray-600 leading-relaxed">
-              Sunset aesthetic, snorkeling, beach lounge, dan penginapan nyaman.
+              Sunset aesthetic, snorkeling, beach lounge, dan penginapan.
             </p>
           </div>
         </div>
