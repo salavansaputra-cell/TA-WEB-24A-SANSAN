@@ -71,9 +71,13 @@ export default function FacilitiesPage() {
           {facilities.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 group"
+              className={`bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 group
+              ${
+                index === facilities.length - 1
+                  ? "md:col-span-2 lg:col-span-1 lg:col-start-2"
+                  : ""
+              }`}
             >
-              {/* IMAGE */}
               <div className="overflow-hidden">
                 <img
                   src={item.image}
@@ -82,9 +86,7 @@ export default function FacilitiesPage() {
                 />
               </div>
 
-              {/* CONTENT */}
               <div className="p-6">
-                {/* BADGE */}
                 <div className="inline-block bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full mb-4">
                   Included in Ticket
                 </div>
@@ -99,6 +101,21 @@ export default function FacilitiesPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* EXTRA INFO */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-5">
+            Included in Your Ticket ✅
+          </h2>
+
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Tiket masuk Kyokko Beach sudah termasuk akses ke berbagai fasilitas
+            premium seperti bean bag, gazebo, beach lounge, musholla, toilet,
+            kamar bilas, serta welcome drink tanpa biaya tambahan.
+          </p>
         </div>
       </section>
     </main>
