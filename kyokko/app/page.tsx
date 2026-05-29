@@ -137,6 +137,26 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* MAPS */}
+      <section className="bg-gray-50 py-20 px-6">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold mb-3">Lokasi Kami</h2>
+
+          <p className="text-gray-600">
+            Temukan lokasi Kyokko Beach dengan mudah.
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps?q=Kyokko+Beach+Lampung&output=embed"
+            width="100%"
+            height="450"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
     </main>
   );
 }
