@@ -89,36 +89,35 @@ const penginapan = [
 
 export default function InfoWisataPage() {
   return (
-    <main className="min-h-screen bg-gray-50 pt-28 py-16 px-6">
-      {/* TITLE */}
-      <div className="text-center mb-14">
-        <h1 className="text-4xl font-bold mb-4">
+    <main className="bg-gray-50 min-h-screen pt-28">
+      {/* HERO */}
+      <section className="text-center px-6 mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-5">
           Info Wisata Kyokko Beach 🌊
         </h1>
 
-        <p className="text-gray-600 max-w-3xl mx-auto">
-          Nikmati berbagai aktivitas wisata dan pilihan penginapan terbaik di
-          Kyokko Beach.
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          Nikmati berbagai aktivitas wisata dan penginapan terbaik di
+          Kyokko Beach bersama keluarga maupun teman.
         </p>
-      </div>
+      </section>
 
       {/* WISATA */}
-      <div className="mb-20">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+      <section className="max-w-7xl mx-auto px-6 mb-24">
+        <h2 className="text-3xl font-bold mb-8">
           Aktivitas Wisata 🎟️
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {wisata.map((item, index) => (
             <div
               key={index}
               className="
                 bg-white
-                rounded-2xl
+                rounded-3xl
                 overflow-hidden
-                shadow-md
-                hover:shadow-2xl
-                hover:-translate-y-2
+                shadow
+                hover:shadow-xl
                 transition
                 duration-300
               "
@@ -132,7 +131,7 @@ export default function InfoWisataPage() {
 
               {/* CONTENT */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">
+                <h2 className="text-2xl font-semibold mb-3">
                   {item.title}
                 </h2>
 
@@ -142,11 +141,11 @@ export default function InfoWisataPage() {
 
                 {/* PRICE */}
                 <div className="space-y-3 mb-5">
-                  <div className="bg-blue-100 p-3 rounded-lg">
+                  <div className="bg-blue-100 rounded-lg p-3">
                     Weekday: {item.weekday}
                   </div>
 
-                  <div className="bg-pink-100 p-3 rounded-lg">
+                  <div className="bg-pink-100 rounded-lg p-3">
                     Weekend: {item.weekend}
                   </div>
                 </div>
@@ -163,8 +162,8 @@ export default function InfoWisataPage() {
                         key={i}
                         className="
                           bg-gray-100
-                          p-2
                           rounded-lg
+                          p-2
                           text-sm
                         "
                       >
@@ -177,25 +176,24 @@ export default function InfoWisataPage() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* PENGINAPAN */}
-      <div>
-        <h2 className="text-3xl font-bold mb-8 text-center">
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+        <h2 className="text-3xl font-bold mb-8">
           Penginapan 🏨
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8">
           {penginapan.map((room, index) => (
             <div
               key={index}
               className="
                 bg-white
-                rounded-2xl
+                rounded-3xl
                 overflow-hidden
-                shadow-md
-                hover:shadow-2xl
-                hover:-translate-y-2
+                shadow
+                hover:shadow-xl
                 transition
                 duration-300
               "
@@ -209,7 +207,7 @@ export default function InfoWisataPage() {
 
               {/* CONTENT */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">
+                <h2 className="text-2xl font-semibold mb-3">
                   {room.title}
                 </h2>
 
@@ -217,14 +215,14 @@ export default function InfoWisataPage() {
                   {room.desc}
                 </p>
 
-                <div className="text-blue-500 text-2xl font-bold">
+                <div className="text-2xl font-bold text-blue-500">
                   {room.price}
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }
