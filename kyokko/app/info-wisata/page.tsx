@@ -1,8 +1,8 @@
 const wisata = [
   {
     title: "Tiket Masuk",
-    weekday: "Rp80.000",
-    weekend: "Rp100.000",
+    weekday: 80000,
+    weekend: 100000,
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
 
@@ -22,8 +22,8 @@ const wisata = [
 
   {
     title: "Snorkeling",
-    weekday: "Rp50.000",
-    weekend: "Rp75.000",
+    weekday: 50000,
+    weekend: 75000,
     image:
       "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
 
@@ -39,8 +39,8 @@ const wisata = [
 
   {
     title: "Paddle Board",
-    weekday: "Rp40.000",
-    weekend: "Rp60.000",
+    weekday: 40000,
+    weekend: 60000,
     image:
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
 
@@ -58,7 +58,7 @@ const wisata = [
 const penginapan = [
   {
     title: "Standard Room",
-    price: "Rp350.000 / malam",
+    price: 350000,
     image:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
 
@@ -68,7 +68,7 @@ const penginapan = [
 
   {
     title: "Deluxe Room",
-    price: "Rp550.000 / malam",
+    price: 550000,
     image:
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
 
@@ -78,7 +78,7 @@ const penginapan = [
 
   {
     title: "Private Villa",
-    price: "Rp1.200.000 / malam",
+    price: 1200000,
     image:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
 
@@ -216,7 +216,7 @@ export default function InfoWisataPage() {
                 </p>
 
                 <div className="text-2xl font-bold text-blue-500">
-                  {room.price}
+                  Rp{room.price.toLocaleString("id-ID")} / malam
                 </div>
               </div>
             </div>
