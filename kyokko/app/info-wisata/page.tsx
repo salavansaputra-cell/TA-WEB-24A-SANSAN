@@ -204,6 +204,27 @@ export default function InfoWisataPage() {
                     ))}
                   </ul>
                 </div>
+
+                {/* BUTTON */}
+                <button
+                  onClick={() =>
+                    addToReservasi({
+                      name: item.title,
+                      price: item.weekday,
+                    })
+                  }
+                  className="
+                    w-full
+                    bg-blue-500
+                    text-white
+                    py-3
+                    rounded-xl
+                    hover:bg-blue-600
+                    transition
+                  "
+                >
+                  Tambah ke Reservasi
+                </button>
               </div>
             </div>
           ))}
