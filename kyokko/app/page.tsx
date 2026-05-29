@@ -1,3 +1,6 @@
+// COMMIT 6
+// git commit -m "memperhalus tampilan card dan section home"
+
 import Link from "next/link";
 
 export default function Home() {
@@ -30,7 +33,16 @@ export default function Home() {
 
           <Link
             href="/reservasi"
-            className="bg-blue-500 hover:bg-blue-600 px-7 py-3 rounded-xl transition duration-300"
+            className="
+              bg-blue-500
+              hover:bg-blue-600
+              px-7
+              py-3
+              rounded-xl
+              transition
+              duration-300
+              inline-block
+            "
           >
             Reservasi Sekarang
           </Link>
@@ -54,7 +66,17 @@ export default function Home() {
       {/* INFO CARD */}
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl shadow-sm p-8 text-center hover:shadow-lg transition">
+          <div
+            className="
+              bg-white
+              rounded-2xl
+              shadow-sm
+              p-8
+              text-center
+              hover:shadow-lg
+              transition
+            "
+          >
             <div className="text-4xl mb-4">📍</div>
 
             <h3 className="text-xl font-semibold mb-3">Lokasi</h3>
@@ -64,7 +86,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm p-8 text-center hover:shadow-lg transition">
+          <div
+            className="
+              bg-white
+              rounded-2xl
+              shadow-sm
+              p-8
+              text-center
+              hover:shadow-lg
+              transition
+            "
+          >
             <div className="text-4xl mb-4">💰</div>
 
             <h3 className="text-xl font-semibold mb-3">Tiket Masuk</h3>
@@ -74,13 +106,23 @@ export default function Home() {
             <p className="text-gray-600">Weekend Rp100.000</p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm p-8 text-center hover:shadow-lg transition">
+          <div
+            className="
+              bg-white
+              rounded-2xl
+              shadow-sm
+              p-8
+              text-center
+              hover:shadow-lg
+              transition
+            "
+          >
             <div className="text-4xl mb-4">🌅</div>
 
             <h3 className="text-xl font-semibold mb-3">Daya Tarik</h3>
 
-            <p className="text-gray-600">
-              Sunset aesthetic, snorkeling, beach lounge, dan penginapan.
+            <p className="text-gray-600 leading-relaxed">
+              Sunset aesthetic, snorkeling, beach lounge, dan penginapan nyaman.
             </p>
           </div>
         </div>
@@ -122,12 +164,17 @@ export default function Home() {
                 shadow-sm
                 hover:shadow-xl
                 transition
+                duration-300
               "
             >
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-56 object-cover"
+                className="
+                  w-full
+                  h-56
+                  object-cover
+                "
               />
 
               <div className="p-6">
@@ -148,7 +195,15 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-lg">
+        <div
+          className="
+            max-w-6xl
+            mx-auto
+            rounded-3xl
+            overflow-hidden
+            shadow-lg
+          "
+        >
           <iframe
             src="https://www.google.com/maps?q=Kyokko+Beach+Lampung&output=embed"
             width="100%"
