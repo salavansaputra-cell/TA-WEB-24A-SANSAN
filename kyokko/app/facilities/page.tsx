@@ -1,42 +1,49 @@
 const facilities = [
   {
     title: "Bean Bag Area",
-    desc: "Area santai dengan bean bag nyaman untuk menikmati suasana pantai.",
+    desc: "Area santai dengan bean bag nyaman untuk menikmati suasana pantai dan sunset aesthetic bersama keluarga maupun teman.",
+    image:
+      "https://images.unsplash.com/photo-1520454974749-611b7248ffdb",
+  },
+
+  {
+    title: "Gazebo & Saung",
+    desc: "Gazebo dan saung tersedia secara gratis untuk bersantai sambil menikmati angin pantai yang sejuk.",
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
   },
 
   {
-    title: "Gazebo & Saung",
-    desc: "Gazebo gratis tersedia untuk bersantai bersama keluarga dan teman.",
-    image:
-      "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
-  },
-
-  {
     title: "Welcome Drink",
-    desc: "Setiap tiket masuk mendapatkan satu minuman gratis.",
+    desc: "Setiap tiket masuk sudah termasuk satu minuman gratis yang dapat ditukarkan di area restoran atau bar.",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
   },
 
   {
     title: "Toilet & Kamar Bilas",
-    desc: "Toilet dan kamar bilas modern yang bersih dan nyaman.",
+    desc: "Tersedia toilet bersih dan kamar bilas modern yang nyaman digunakan setelah aktivitas pantai.",
     image:
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206",
+      "https://images.unsplash.com/photo-1621293954908-907159247fc8",
   },
 
   {
     title: "Musholla",
-    desc: "Musholla nyaman tersedia untuk pengunjung Kyokko Beach.",
+    desc: "Musholla nyaman tersedia bagi pengunjung untuk beribadah dengan suasana yang tenang dekat area pantai.",
     image:
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda",
+      "https://images.unsplash.com/photo-1564769625905-50e93615e769",
   },
 
   {
-    title: "Beach Club Area",
-    desc: "Akses area beach club modern dengan suasana aesthetic dan santai.",
+    title: "Beach Lounge",
+    desc: "Area beach lounge modern untuk menikmati suasana santai dengan pemandangan laut yang indah.",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+  },
+
+  {
+    title: "Spot Foto Instagramable",
+    desc: "Area yang dirancang khusus untuk foto-foto menarik dengan pemandangan laut yang indah.",
     image:
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
   },
