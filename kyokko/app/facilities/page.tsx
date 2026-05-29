@@ -66,14 +66,23 @@ export default function FacilitiesPage() {
               key={index}
               className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 group"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-64 object-cover"
-              />
+              {/* IMAGE */}
+              <div className="overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
 
+              {/* CONTENT */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-3">
+                {/* BADGE */}
+                <div className="inline-block bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full mb-4">
+                  Included in Ticket
+                </div>
+
+                <h2 className="text-2xl font-semibold mb-3">
                   {item.title}
                 </h2>
 
