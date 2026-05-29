@@ -1,3 +1,12 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
+type ReservasiItem = {
+  name: string;
+  price: number;
+};
+
 const wisata = [
   {
     title: "Tiket Masuk",
@@ -88,6 +97,27 @@ const penginapan = [
 ];
 
 export default function InfoWisataPage() {
+  const router = useRouter();
+
+  const addToReservasi = (item: ReservasiItem) => {
+    const stored = localStorage.getItem("reservasiCart");
+
+    const reservasi: ReservasiItem[] = stored
+      ? JSON.parse(stored)
+      : [];
+
+    reservasi.push(item);
+
+    localStorage.setItem(
+      "reservasiCart",
+      JSON.stringify(reservasi)
+    );
+
+    alert("Berhasil ditambahkan ke reservasi!");
+
+    router.push("/reservasi");
+  };
+
   return (
     <main className="bg-gray-50 min-h-screen pt-28">
       {/* HERO */}
@@ -153,7 +183,7 @@ export default function InfoWisataPage() {
                 </div>
 
                 {/* INCLUDE */}
-                <div>
+                <div className="mb-5">
                   <h3 className="font-semibold mb-3">
                     Include:
                   </h3>
