@@ -54,50 +54,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INFORMASI SECTION */}
-      <section className="bg-gray-100 py-16 px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Informasi Wisata 🎟️
-          </h2>
-
-          <p className="text-gray-600">
-            Informasi singkat mengenai Kyokko Beach.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* LOKASI */}
-          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition duration-300 text-center">
+      {/* INFO CARD */}
+      <section className="bg-gray-50 py-20 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center hover:shadow-lg transition">
             <div className="text-4xl mb-4">📍</div>
 
-            <h3 className="text-xl font-bold mb-3">Lokasi</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              Lokasi
+            </h3>
 
             <p className="text-gray-600">
               Kyokko Beach, Teluk Pandan, Pesawaran, Lampung
             </p>
           </div>
 
-          {/* TIKET */}
-          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition duration-300 text-center">
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center hover:shadow-lg transition">
             <div className="text-4xl mb-4">💰</div>
 
-            <h3 className="text-xl font-bold mb-3">Tiket Masuk</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              Tiket Masuk
+            </h3>
 
-            <p className="text-gray-600 mb-2">Weekday: Rp80.000</p>
+            <p className="text-gray-600">
+              Weekday Rp80.000
+            </p>
 
-            <p className="text-gray-600">Weekend: Rp100.000</p>
+            <p className="text-gray-600">
+              Weekend Rp100.000
+            </p>
           </div>
 
-          {/* DAYA TARIK */}
-          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition duration-300 text-center">
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center hover:shadow-lg transition">
             <div className="text-4xl mb-4">🌅</div>
 
-            <h3 className="text-xl font-bold mb-3">Daya Tarik</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              Daya Tarik
+            </h3>
 
-            <p className="text-gray-600 leading-relaxed">
-              Sunset aesthetic, snorkeling, beach lounge modern, dan
-              penginapan tropis nyaman.
+            <p className="text-gray-600">
+              Sunset aesthetic, snorkeling, beach lounge, dan
+              penginapan.
             </p>
           </div>
         </div>
