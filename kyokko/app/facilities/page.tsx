@@ -44,19 +44,21 @@ const facilities = [
 
 export default function FacilitiesPage() {
   return (
-    <main className="bg-gray-50 min-h-screen pt-28 py-16 px-6">
-      <div className="text-center mb-14">
-        <h1 className="text-4xl font-bold mb-4">
+    <main className="bg-gray-50 min-h-screen pt-28">
+      {/* HERO */}
+      <section className="text-center px-6 mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-5">
           Facilities Kyokko Beach 🌊
         </h1>
 
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Nikmati berbagai fasilitas premium yang sudah tersedia untuk
-          kenyamanan liburanmu di Kyokko Beach.
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          Nikmati berbagai fasilitas premium yang tersedia di Kyokko Beach untuk
+          memberikan pengalaman liburan yang nyaman, santai, dan menyenangkan
+          bersama keluarga maupun teman.
         </p>
-      </div>
+      </section>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
         {facilities.map((item, index) => (
           <div
             key={index}
