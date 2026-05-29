@@ -142,11 +142,13 @@ export default function InfoWisataPage() {
                 {/* PRICE */}
                 <div className="space-y-3 mb-5">
                   <div className="bg-blue-100 rounded-lg p-3">
-                    Weekday: {item.weekday}
+                    Weekday: Rp
+                    {item.weekday.toLocaleString("id-ID")}
                   </div>
 
                   <div className="bg-pink-100 rounded-lg p-3">
-                    Weekend: {item.weekend}
+                    Weekend: Rp
+                    {item.weekend.toLocaleString("id-ID")}
                   </div>
                 </div>
 
