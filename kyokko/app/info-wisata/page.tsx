@@ -12,11 +12,9 @@ const wisata = [
     title: "Tiket Masuk",
     weekday: 80000,
     weekend: 100000,
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
 
-    desc:
-      "Tiket masuk sudah termasuk welcome drink, bean bag, gazebo, kursi santai, toilet, musholla, dan akses beach club.",
+    desc: "Tiket masuk sudah termasuk welcome drink, bean bag, gazebo, kursi santai, toilet, musholla, dan akses beach club.",
 
     include: [
       "Welcome Drink",
@@ -31,34 +29,22 @@ const wisata = [
     title: "Snorkeling",
     weekday: 50000,
     weekend: 75000,
-    image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
 
-    desc:
-      "Nikmati pengalaman snorkeling dengan panorama bawah laut yang indah.",
+    desc: "Nikmati pengalaman snorkeling dengan panorama bawah laut yang indah.",
 
-    include: [
-      "Peralatan Snorkeling",
-      "Spot Laut",
-      "Pendamping",
-    ],
+    include: ["Peralatan Snorkeling", "Spot Laut", "Pendamping"],
   },
 
   {
     title: "Paddle Board",
     weekday: 40000,
     weekend: 60000,
-    image:
-      "https://images.unsplash.com/photo-1521335629791-ce4aec67dd53",
+    image: "https://images.unsplash.com/photo-1521335629791-ce4aec67dd53",
 
-    desc:
-      "Aktivitas paddle board seru untuk menikmati suasana pantai.",
+    desc: "Aktivitas paddle board seru untuk menikmati suasana pantai.",
 
-    include: [
-      "Paddle Board",
-      "Pelampung",
-      "Area Bermain Air",
-    ],
+    include: ["Paddle Board", "Pelampung", "Area Bermain Air"],
   },
 ];
 
@@ -66,31 +52,25 @@ const penginapan = [
   {
     title: "Standard Room",
     price: 350000,
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945",
 
-    desc:
-      "Kamar nyaman untuk pasangan atau keluarga kecil.",
+    desc: "Kamar nyaman untuk pasangan atau keluarga kecil.",
   },
 
   {
     title: "Deluxe Room",
     price: 550000,
-    image:
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
 
-    desc:
-      "Kamar luas dengan desain modern dekat pantai.",
+    desc: "Kamar luas dengan desain modern dekat pantai.",
   },
 
   {
     title: "Private Villa",
     price: 1200000,
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
 
-    desc:
-      "Villa private eksklusif dengan pengalaman menginap mewah.",
+    desc: "Villa private eksklusif dengan pengalaman menginap mewah.",
   },
 ];
 
@@ -100,16 +80,11 @@ export default function InfoWisataPage() {
   const addToReservasi = (item: ReservasiItem) => {
     const stored = localStorage.getItem("reservasiCart");
 
-    const reservasi: ReservasiItem[] = stored
-      ? JSON.parse(stored)
-      : [];
+    const reservasi: ReservasiItem[] = stored ? JSON.parse(stored) : [];
 
     reservasi.push(item);
 
-    localStorage.setItem(
-      "reservasiCart",
-      JSON.stringify(reservasi)
-    );
+    localStorage.setItem("reservasiCart", JSON.stringify(reservasi));
 
     alert("Berhasil ditambahkan ke reservasi!");
 
@@ -132,9 +107,7 @@ export default function InfoWisataPage() {
 
       {/* WISATA */}
       <section className="max-w-7xl mx-auto px-6 mb-24">
-        <h2 className="text-3xl font-bold mb-8">
-          Aktivitas Wisata 🎟️
-        </h2>
+        <h2 className="text-3xl font-bold mb-8">Aktivitas Wisata 🎟️</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {wisata.map((item, index) => (
@@ -156,13 +129,9 @@ export default function InfoWisataPage() {
               />
 
               <div className="p-6">
-                <h2 className="text-2xl font-semibold mb-3">
-                  {item.title}
-                </h2>
+                <h2 className="text-2xl font-semibold mb-3">{item.title}</h2>
 
-                <p className="text-gray-600 mb-4">
-                  {item.desc}
-                </p>
+                <p className="text-gray-600 mb-4">{item.desc}</p>
 
                 <div className="mb-4 space-y-2">
                   <div className="bg-blue-100 rounded-lg p-3">
@@ -177,9 +146,7 @@ export default function InfoWisataPage() {
                 </div>
 
                 <div className="mb-5">
-                  <h3 className="font-semibold mb-2">
-                    Include:
-                  </h3>
+                  <h3 className="font-semibold mb-2">Include:</h3>
 
                   {item.include.map((inc, i) => (
                     <div
@@ -224,9 +191,7 @@ export default function InfoWisataPage() {
 
       {/* PENGINAPAN */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
-        <h2 className="text-3xl font-bold mb-8">
-          Penginapan 🏨
-        </h2>
+        <h2 className="text-3xl font-bold mb-8">Penginapan 🏨</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {penginapan.map((room, index) => (
@@ -248,13 +213,9 @@ export default function InfoWisataPage() {
               />
 
               <div className="p-6">
-                <h2 className="text-2xl font-semibold mb-3">
-                  {room.title}
-                </h2>
+                <h2 className="text-2xl font-semibold mb-3">{room.title}</h2>
 
-                <p className="text-gray-600 mb-4">
-                  {room.desc}
-                </p>
+                <p className="text-gray-600 mb-4">{room.desc}</p>
 
                 <div className="text-2xl font-bold text-blue-500 mb-5">
                   Rp{room.price.toLocaleString("id-ID")} / malam

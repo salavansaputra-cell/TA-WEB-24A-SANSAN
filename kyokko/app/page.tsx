@@ -1,3 +1,8 @@
+// COMMIT 1
+// git commit -m "menambahkan Link dan mengganti background hero"
+
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-gray-100">
@@ -5,8 +10,7 @@ export default function Home() {
       <section
         className="h-screen bg-cover bg-center flex items-center justify-center px-6 relative"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')",
+          backgroundImage: "url('/images/pantai.jpg')",
         }}
       >
         {/* OVERLAY */}
@@ -27,12 +31,12 @@ export default function Home() {
             pengalaman liburan premium di Lampung.
           </p>
 
-          <a
+          <Link
             href="/reservasi"
             className="bg-blue-500 px-7 py-3 rounded-xl font-medium hover:bg-blue-600 transition duration-300 inline-block"
           >
             Reservasi Sekarang
-          </a>
+          </Link>
         </div>
       </section>
 

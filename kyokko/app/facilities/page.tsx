@@ -2,50 +2,43 @@ const facilities = [
   {
     title: "Bean Bag Area",
     desc: "Area santai dengan bean bag nyaman untuk menikmati suasana pantai dan sunset aesthetic bersama keluarga maupun teman.",
-    image:
-      "https://images.unsplash.com/photo-1520454974749-611b7248ffdb",
+    image: "https://images.unsplash.com/photo-1520454974749-611b7248ffdb",
   },
 
   {
     title: "Gazebo & Saung",
     desc: "Gazebo dan saung tersedia secara gratis untuk bersantai sambil menikmati angin pantai yang sejuk.",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
   },
 
   {
     title: "Welcome Drink",
     desc: "Setiap tiket masuk sudah termasuk satu minuman gratis yang dapat ditukarkan di area restoran atau bar.",
-    image:
-      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
   },
 
   {
     title: "Toilet & Kamar Bilas",
     desc: "Tersedia toilet bersih dan kamar bilas modern yang nyaman digunakan setelah aktivitas pantai.",
-    image:
-      "https://images.unsplash.com/photo-1621293954908-907159247fc8",
+    image: "https://images.unsplash.com/photo-1621293954908-907159247fc8",
   },
 
   {
     title: "Musholla",
     desc: "Musholla nyaman tersedia bagi pengunjung untuk beribadah dengan suasana yang tenang dekat area pantai.",
-    image:
-      "https://images.unsplash.com/photo-1564769625905-50e93615e769",
+    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769",
   },
 
   {
     title: "Beach Lounge",
     desc: "Area beach lounge modern untuk menikmati suasana santai dengan pemandangan laut yang indah.",
-    image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
   },
 
   {
     title: "Spot Foto Instagramable",
     desc: "Area yang dirancang khusus untuk foto-foto menarik dengan pemandangan laut yang indah.",
-    image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
   },
 ];
 
@@ -91,13 +84,9 @@ export default function FacilitiesPage() {
                   Included in Ticket
                 </div>
 
-                <h2 className="text-2xl font-semibold mb-3">
-                  {item.title}
-                </h2>
+                <h2 className="text-2xl font-semibold mb-3">{item.title}</h2>
 
-                <p className="text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
