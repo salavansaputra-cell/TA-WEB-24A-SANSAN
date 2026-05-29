@@ -45,7 +45,6 @@ const facilities = [
 export default function FacilitiesPage() {
   return (
     <main className="bg-gray-50 min-h-screen pt-28">
-      {/* HERO */}
       <section className="text-center px-6 mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-5">
           Facilities Kyokko Beach 🌊
@@ -58,30 +57,33 @@ export default function FacilitiesPage() {
         </p>
       </section>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-        {facilities.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300"
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-64 object-cover"
-            />
+      {/* CARD SECTION */}
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {facilities.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-64 object-cover"
+              />
 
-            <div className="p-6">
-              <h2 className="text-2xl font-bold mb-3">
-                {item.title}
-              </h2>
+              <div className="p-6">
+                <h2 className="text-2xl font-bold mb-3">
+                  {item.title}
+                </h2>
 
-              <p className="text-gray-600 leading-relaxed">
-                {item.desc}
-              </p>
+                <p className="text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
