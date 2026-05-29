@@ -45,6 +45,7 @@ const facilities = [
 export default function FacilitiesPage() {
   return (
     <main className="bg-gray-50 min-h-screen pt-28">
+      {/* HERO */}
       <section className="text-center px-6 mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-5">
           Facilities Kyokko Beach 🌊
@@ -63,7 +64,7 @@ export default function FacilitiesPage() {
           {facilities.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 group"
             >
               <img
                 src={item.image}
