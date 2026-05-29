@@ -1,7 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-
 type ReservasiItem = {
   name: string;
   price: number;
@@ -75,8 +73,6 @@ const penginapan = [
 ];
 
 export default function InfoWisataPage() {
-  const router = useRouter();
-
   const addToReservasi = (item: ReservasiItem) => {
     const stored = localStorage.getItem("reservasiCart");
 
@@ -86,9 +82,9 @@ export default function InfoWisataPage() {
 
     localStorage.setItem("reservasiCart", JSON.stringify(reservasi));
 
-    alert("Berhasil ditambahkan ke reservasi!");
+    alert(`${item.name} berhasil ditambahkan ke reservasi 🎉`);
 
-    router.push("/reservasi");
+    // TIDAK redirect lagi
   };
 
   return (
@@ -113,14 +109,7 @@ export default function InfoWisataPage() {
           {wisata.map((item, index) => (
             <div
               key={index}
-              className="
-                bg-white
-                rounded-3xl
-                overflow-hidden
-                shadow
-                hover:shadow-xl
-                transition
-              "
+              className="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
             >
               <img
                 src={item.image}
@@ -151,13 +140,7 @@ export default function InfoWisataPage() {
                   {item.include.map((inc, i) => (
                     <div
                       key={i}
-                      className="
-                        bg-gray-100
-                        rounded-lg
-                        p-2
-                        mb-2
-                        text-sm
-                      "
+                      className="bg-gray-100 rounded-lg p-2 mb-2 text-sm"
                     >
                       ✅ {inc}
                     </div>
@@ -171,15 +154,7 @@ export default function InfoWisataPage() {
                       price: item.weekday,
                     })
                   }
-                  className="
-                    w-full
-                    bg-blue-500
-                    text-white
-                    py-3
-                    rounded-xl
-                    hover:bg-blue-600
-                    transition
-                  "
+                  className="w-full bg-blue-500 text-white py-3 rounded-xl hover:bg-blue-600 transition"
                 >
                   Tambah ke Reservasi
                 </button>
@@ -197,14 +172,7 @@ export default function InfoWisataPage() {
           {penginapan.map((room, index) => (
             <div
               key={index}
-              className="
-                bg-white
-                rounded-3xl
-                overflow-hidden
-                shadow
-                hover:shadow-xl
-                transition
-              "
+              className="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
             >
               <img
                 src={room.image}
@@ -218,7 +186,8 @@ export default function InfoWisataPage() {
                 <p className="text-gray-600 mb-4">{room.desc}</p>
 
                 <div className="text-2xl font-bold text-blue-500 mb-5">
-                  Rp{room.price.toLocaleString("id-ID")} / malam
+                  Rp
+                  {room.price.toLocaleString("id-ID")} / malam
                 </div>
 
                 <button
@@ -228,15 +197,7 @@ export default function InfoWisataPage() {
                       price: room.price,
                     })
                   }
-                  className="
-                    w-full
-                    bg-blue-500
-                    text-white
-                    py-3
-                    rounded-xl
-                    hover:bg-blue-600
-                    transition
-                  "
+                  className="w-full bg-blue-500 text-white py-3 rounded-xl hover:bg-blue-600 transition"
                 >
                   Tambah ke Reservasi
                 </button>
