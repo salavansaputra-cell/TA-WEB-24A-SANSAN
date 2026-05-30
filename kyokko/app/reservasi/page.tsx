@@ -15,7 +15,9 @@ export default function ReservasiPage() {
 
       <div>
         <div>
-          Form Reservasi
+          <h2>
+            Data Pemesan
+          </h2>
         </div>
 
         <div>
