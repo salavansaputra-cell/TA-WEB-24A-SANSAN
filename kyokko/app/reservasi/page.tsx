@@ -12,6 +12,16 @@ export default function ReservasiPage() {
           Lengkapi data pemesanan Anda
         </p>
       </section>
+
+      <div>
+        <div>
+          Form Reservasi
+        </div>
+
+        <div>
+          Detail Reservasi
+        </div>
+      </div>
     </main>
   );
 }
