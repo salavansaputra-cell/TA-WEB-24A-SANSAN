@@ -14,6 +14,21 @@ export default function ReservasiPage() {
   const [checkOut, setCheckOut] =
     useState("");
 
+  // hitung malam
+  const jumlahMalam =
+    checkIn && checkOut
+      ? Math.max(
+          1,
+          Math.ceil(
+            (
+              new Date(checkOut).getTime() -
+              new Date(checkIn).getTime()
+            ) /
+              (1000 * 60 * 60 * 24),
+          ),
+        )
+      : 1;
+
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
       <section className="text-center mb-10">
@@ -84,6 +99,14 @@ export default function ReservasiPage() {
                 }
                 className="w-full border rounded-xl p-4 mt-2"
               />
+            </div>
+
+            <div className="bg-blue-100 rounded-xl p-4">
+              Lama Menginap:
+              {" "}
+              {jumlahMalam}
+              {" "}
+              malam
             </div>
 
           </div>
