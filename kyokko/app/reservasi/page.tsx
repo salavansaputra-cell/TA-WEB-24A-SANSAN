@@ -11,6 +11,9 @@ export default function ReservasiPage() {
   const [checkIn, setCheckIn] =
     useState("");
 
+  const [checkOut, setCheckOut] =
+    useState("");
+
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
       <section className="text-center mb-10">
@@ -63,6 +66,21 @@ export default function ReservasiPage() {
                 value={checkIn}
                 onChange={(e) =>
                   setCheckIn(e.target.value)
+                }
+                className="w-full border rounded-xl p-4 mt-2"
+              />
+            </div>
+
+            <div>
+              <label>
+                Check Out
+              </label>
+
+              <input
+                type="date"
+                value={checkOut}
+                onChange={(e) =>
+                  setCheckOut(e.target.value)
                 }
                 className="w-full border rounded-xl p-4 mt-2"
               />
