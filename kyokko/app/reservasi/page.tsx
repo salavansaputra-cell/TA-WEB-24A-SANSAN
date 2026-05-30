@@ -1,6 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 export default function ReservasiPage() {
+  const [nama, setNama] = useState("");
+
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
       <section className="text-center mb-10">
