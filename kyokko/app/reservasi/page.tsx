@@ -7,6 +7,10 @@ export default function ReservasiPage() {
         <h1>
           Reservasi Kyokko Beach 🌊
         </h1>
+
+        <p>
+          Lengkapi data pemesanan Anda
+        </p>
       </section>
     </main>
   );
