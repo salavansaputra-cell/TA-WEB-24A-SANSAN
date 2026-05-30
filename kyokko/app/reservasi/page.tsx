@@ -20,9 +20,19 @@ export default function ReservasiPage() {
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
 
         <div className="bg-white rounded-3xl shadow p-8">
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-2xl font-bold mb-6">
             Data Pemesan
           </h2>
+
+          <input
+            type="text"
+            placeholder="Nama Lengkap"
+            value={nama}
+            onChange={(e) =>
+              setNama(e.target.value)
+            }
+            className="w-full border rounded-xl p-4"
+          />
         </div>
 
         <div className="bg-white rounded-3xl shadow p-8">
