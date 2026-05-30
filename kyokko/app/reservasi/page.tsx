@@ -3,7 +3,11 @@
 export default function ReservasiPage() {
   return (
     <main>
-      Reservasi Page
+      <section>
+        <h1>
+          Reservasi Kyokko Beach 🌊
+        </h1>
+      </section>
     </main>
   );
 }
