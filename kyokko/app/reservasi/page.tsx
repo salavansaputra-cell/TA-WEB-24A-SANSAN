@@ -11,7 +11,6 @@ export default function ReservasiPage() {
   const [cart, setCart] = useState<CartItem[]>(() => {
     if (typeof window !== "undefined") {
       const data = localStorage.getItem("reservasiCart");
-
       return data ? JSON.parse(data) : [];
     }
 
@@ -19,8 +18,11 @@ export default function ReservasiPage() {
   });
 
   const [nama, setNama] = useState("");
+
   const [nomorHp, setNomorHp] = useState("");
+
   const [checkIn, setCheckIn] = useState("");
+
   const [checkOut, setCheckOut] = useState("");
 
   // hitung malam
@@ -35,8 +37,29 @@ export default function ReservasiPage() {
         )
       : 1;
 
+  // cek weekend
+  const isWeekend = checkIn
+    ? [0, 6].includes(new Date(checkIn).getDay())
+    : false;
+
+  // hitung harga
+  const getPrice = (item: CartItem) => {
+    // tiket masuk
+    if (item.name === "Tiket Masuk") {
+      return isWeekend ? 100000 : 80000;
+    }
+
+    // penginapan
+    if (item.name.includes("Room") || item.name.includes("Villa")) {
+      return item.price * jumlahMalam;
+    }
+
+    // snorkeling / paddle
+    return item.price;
+  };
+
   // total harga
-  const total = cart.reduce((total, item) => total + item.price, 0);
+  const total = cart.reduce((total, item) => total + getPrice(item), 0);
 
   // hapus item
   const removeItem = (index: number) => {
@@ -109,43 +132,39 @@ export default function ReservasiPage() {
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
 
-          {cart.length === 0 ? (
-            <p className="text-gray-500">Belum ada item reservasi</p>
-          ) : (
-            <div className="space-y-4">
-              {cart.map((item, index) => (
-                <div
-                  key={index}
-                  className="border rounded-2xl p-4 flex justify-between"
-                >
-                  <div>
-                    <h3 className="font-semibold">{item.name}</h3>
+          <div className="space-y-4">
+            {cart.map((item, index) => (
+              <div
+                key={index}
+                className="border rounded-2xl p-4 flex justify-between"
+              >
+                <div>
+                  <h3 className="font-semibold">{item.name}</h3>
 
-                    <p className="text-gray-600">
-                      Rp
-                      {item.price.toLocaleString("id-ID")}
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => removeItem(index)}
-                    className="bg-red-500 text-white px-4 rounded-xl"
-                  >
-                    Hapus
-                  </button>
+                  <p className="text-gray-600">
+                    Rp
+                    {getPrice(item).toLocaleString("id-ID")}
+                  </p>
                 </div>
-              ))}
 
-              <div className="border-t pt-4 flex justify-between text-xl font-bold">
-                <span>Total</span>
-
-                <span>
-                  Rp
-                  {total.toLocaleString("id-ID")}
-                </span>
+                <button
+                  onClick={() => removeItem(index)}
+                  className="bg-red-500 text-white px-4 rounded-xl"
+                >
+                  Hapus
+                </button>
               </div>
+            ))}
+
+            <div className="border-t pt-4 flex justify-between text-2xl font-bold">
+              <span>Total</span>
+
+              <span>
+                Rp
+                {total.toLocaleString("id-ID")}
+              </span>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </main>
