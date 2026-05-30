@@ -109,39 +109,43 @@ export default function ReservasiPage() {
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
 
-          <div className="space-y-4">
-            {cart.map((item, index) => (
-              <div
-                key={index}
-                className="border rounded-2xl p-4 flex justify-between"
-              >
-                <div>
-                  <h3 className="font-semibold">{item.name}</h3>
-
-                  <p className="text-gray-600">
-                    Rp
-                    {item.price.toLocaleString("id-ID")}
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => removeItem(index)}
-                  className="bg-red-500 text-white px-4 rounded-xl"
+          {cart.length === 0 ? (
+            <p className="text-gray-500">Belum ada item reservasi</p>
+          ) : (
+            <div className="space-y-4">
+              {cart.map((item, index) => (
+                <div
+                  key={index}
+                  className="border rounded-2xl p-4 flex justify-between"
                 >
-                  Hapus
-                </button>
+                  <div>
+                    <h3 className="font-semibold">{item.name}</h3>
+
+                    <p className="text-gray-600">
+                      Rp
+                      {item.price.toLocaleString("id-ID")}
+                    </p>
+                  </div>
+
+                  <button
+                    onClick={() => removeItem(index)}
+                    className="bg-red-500 text-white px-4 rounded-xl"
+                  >
+                    Hapus
+                  </button>
+                </div>
+              ))}
+
+              <div className="border-t pt-4 flex justify-between text-xl font-bold">
+                <span>Total</span>
+
+                <span>
+                  Rp
+                  {total.toLocaleString("id-ID")}
+                </span>
               </div>
-            ))}
-
-            <div className="border-t pt-4 flex justify-between text-xl font-bold">
-              <span>Total</span>
-
-              <span>
-                Rp
-                {total.toLocaleString("id-ID")}
-              </span>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </main>
