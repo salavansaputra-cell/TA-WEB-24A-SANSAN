@@ -90,9 +90,7 @@ export default function ReservasiPage() {
             </div>
 
             <div className="bg-blue-100 rounded-xl p-4">
-              Lama Menginap:
-              {jumlahMalam}
-              malam
+              Lama Menginap: {jumlahMalam} malam
             </div>
           </div>
         </div>
@@ -101,10 +99,18 @@ export default function ReservasiPage() {
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
 
-          <p>
-            Total item:
-            {cart.length}
-          </p>
+          <div className="space-y-4">
+            {cart.map((item, index) => (
+              <div key={index} className="border rounded-2xl p-4">
+                <h3 className="font-semibold">{item.name}</h3>
+
+                <p className="text-gray-600">
+                  Rp
+                  {item.price.toLocaleString("id-ID")}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>
