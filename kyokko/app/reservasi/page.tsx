@@ -4,7 +4,12 @@ import { useState } from "react";
 
 export default function ReservasiPage() {
   const [nama, setNama] = useState("");
-  const [nomorHp, setNomorHp] = useState("");
+
+  const [nomorHp, setNomorHp] =
+    useState("");
+
+  const [checkIn, setCheckIn] =
+    useState("");
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
@@ -20,12 +25,14 @@ export default function ReservasiPage() {
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
 
+        {/* FORM */}
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">
             Data Pemesan
           </h2>
 
           <div className="space-y-4">
+
             <input
               type="text"
               placeholder="Nama Lengkap"
@@ -45,9 +52,26 @@ export default function ReservasiPage() {
               }
               className="w-full border rounded-xl p-4"
             />
+
+            <div>
+              <label>
+                Check In
+              </label>
+
+              <input
+                type="date"
+                value={checkIn}
+                onChange={(e) =>
+                  setCheckIn(e.target.value)
+                }
+                className="w-full border rounded-xl p-4 mt-2"
+              />
+            </div>
+
           </div>
         </div>
 
+        {/* DETAIL */}
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold">
             Detail Reservasi
