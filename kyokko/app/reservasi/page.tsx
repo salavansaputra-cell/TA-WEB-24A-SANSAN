@@ -19,11 +19,8 @@ export default function ReservasiPage() {
   });
 
   const [nama, setNama] = useState("");
-
   const [nomorHp, setNomorHp] = useState("");
-
   const [checkIn, setCheckIn] = useState("");
-
   const [checkOut, setCheckOut] = useState("");
 
   // hitung malam
@@ -40,6 +37,15 @@ export default function ReservasiPage() {
 
   // total harga
   const total = cart.reduce((total, item) => total + item.price, 0);
+
+  // hapus item
+  const removeItem = (index: number) => {
+    const updated = cart.filter((_, i) => i !== index);
+
+    setCart(updated);
+
+    localStorage.setItem("reservasiCart", JSON.stringify(updated));
+  };
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
@@ -105,13 +111,25 @@ export default function ReservasiPage() {
 
           <div className="space-y-4">
             {cart.map((item, index) => (
-              <div key={index} className="border rounded-2xl p-4">
-                <h3 className="font-semibold">{item.name}</h3>
+              <div
+                key={index}
+                className="border rounded-2xl p-4 flex justify-between"
+              >
+                <div>
+                  <h3 className="font-semibold">{item.name}</h3>
 
-                <p className="text-gray-600">
-                  Rp
-                  {item.price.toLocaleString("id-ID")}
-                </p>
+                  <p className="text-gray-600">
+                    Rp
+                    {item.price.toLocaleString("id-ID")}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => removeItem(index)}
+                  className="bg-red-500 text-white px-4 rounded-xl"
+                >
+                  Hapus
+                </button>
               </div>
             ))}
 
