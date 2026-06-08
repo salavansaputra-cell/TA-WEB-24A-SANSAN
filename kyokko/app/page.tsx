@@ -1,6 +1,4 @@
-// COMMIT 7
-// git commit -m "update background hero"
-
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
