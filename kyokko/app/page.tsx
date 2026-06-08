@@ -178,7 +178,7 @@ export default function Home() {
                 height={300}
                 className="
                   w-full
-                  h-56
+                  h-100
                   object-cover
                 "
               />
