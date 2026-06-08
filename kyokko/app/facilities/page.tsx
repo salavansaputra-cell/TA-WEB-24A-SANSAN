@@ -22,7 +22,7 @@ const facilities = [
   {
     title: "Toilet & Kamar Bilas",
     desc: "Tersedia toilet bersih dan kamar bilas modern yang nyaman digunakan setelah aktivitas pantai.",
-    image: "https://images.unsplash.com/photo-1621293954908-907159247fc8",
+    image: "/images/toilet.jpg",
   },
 
   {
