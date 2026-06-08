@@ -34,7 +34,7 @@ const facilities = [
   {
     title: "Beach Lounge",
     desc: "Area beach lounge modern untuk menikmati suasana santai dengan pemandangan laut yang indah.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    image: "/images/lounge.webp",
   },
 
   {
