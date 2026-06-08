@@ -79,7 +79,7 @@ export default function FacilitiesPage() {
                   alt={item.title}
                   width={600}
                   height={400}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition duration-500"
+                  className="w-full h-100 object-cover group-hover:scale-105 transition duration-500"
                 />
 
               <div className="p-6">
