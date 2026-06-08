@@ -74,12 +74,13 @@ export default function FacilitiesPage() {
               }`}
             >
               <div className="overflow-hidden">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
+                  width={600}
+                  height={400}
                   className="w-full h-64 object-cover group-hover:scale-105 transition duration-500"
                 />
-              </div>
 
               <div className="p-6">
                 <div className="inline-block bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full mb-4">
