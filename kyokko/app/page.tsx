@@ -171,9 +171,11 @@ export default function Home() {
                 duration-300
               "
             >
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
+                width={600}
+                height={300}
                 className="
                   w-full
                   h-56
