@@ -10,7 +10,7 @@ const wisata = [
     title: "Tiket Masuk",
     weekday: 80000,
     weekend: 100000,
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    image: "/images/tiket.jpg",
 
     desc: "Tiket masuk sudah termasuk welcome drink, bean bag, gazebo, kursi santai, toilet, musholla, dan akses beach club.",
 
