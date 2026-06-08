@@ -10,7 +10,7 @@ const facilities = [
   {
     title: "Gazebo & Saung",
     desc: "Gazebo dan saung tersedia secara gratis untuk bersantai sambil menikmati angin pantai yang sejuk.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    image: "/images/gazebo.jpg",
   },
 
   {
