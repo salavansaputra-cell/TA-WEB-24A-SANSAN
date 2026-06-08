@@ -5,13 +5,15 @@ export default function Home() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section
-        className="h-screen bg-cover bg-center relative flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')",
-        }}
-      >
+      <section className="h-screen relative flex items-center justify-center">
+        <Image
+          src="/images/pantai.jpg"
+          alt="Kyokko Beach"
+          fill
+          priority
+          className="object-cover"
+        />
+
         {/* overlay */}
         <div className="absolute inset-0 bg-black/35"></div>
 
