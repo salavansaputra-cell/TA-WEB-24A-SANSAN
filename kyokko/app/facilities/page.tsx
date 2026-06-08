@@ -4,7 +4,7 @@ const facilities = [
   {
     title: "Bean Bag Area",
     desc: "Area santai dengan bean bag nyaman untuk menikmati suasana pantai dan sunset aesthetic bersama keluarga maupun teman.",
-    image: "https://images.unsplash.com/photo-1520454974749-611b7248ffdb",
+    image: "/images/beanbag.jpeg",
   },
 
   {
