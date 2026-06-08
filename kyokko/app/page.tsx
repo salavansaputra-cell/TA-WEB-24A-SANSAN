@@ -146,12 +146,12 @@ export default function Home() {
           {[
             {
               title: "Bean Bag Area",
-              img: "/images/beanbag.jpg",
+              img: "/images/beanbag.jpeg",
             },
 
             {
               title: "Gazebo Santai",
-              img: "https://images.unsplash.com/photo-1493558103817-58b2924bce98",
+              img: "/images/gazebo.jpg",
             },
 
             {
