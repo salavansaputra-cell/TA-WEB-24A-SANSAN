@@ -28,7 +28,7 @@ const facilities = [
   {
     title: "Musholla",
     desc: "Musholla nyaman tersedia bagi pengunjung untuk beribadah dengan suasana yang tenang dekat area pantai.",
-    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769",
+    image: "/images/mushola.jpeg",
   },
 
   {
