@@ -40,7 +40,7 @@ const facilities = [
   {
     title: "Spot Foto Instagramable",
     desc: "Area yang dirancang khusus untuk foto-foto menarik dengan pemandangan laut yang indah.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    image: "/images/spotfoto.jpeg",
   },
 ];
 
