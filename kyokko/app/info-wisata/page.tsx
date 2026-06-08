@@ -27,7 +27,7 @@ const wisata = [
     title: "Snorkeling",
     weekday: 50000,
     weekend: 75000,
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+    image: "/images/snorkeling.jpeg",
 
     desc: "Nikmati pengalaman snorkeling dengan panorama bawah laut yang indah.",
 
