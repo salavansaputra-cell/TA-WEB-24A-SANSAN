@@ -146,7 +146,7 @@ export default function Home() {
           {[
             {
               title: "Bean Bag Area",
-              img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+              img: "/images/beanbag.jpg",
             },
 
             {
