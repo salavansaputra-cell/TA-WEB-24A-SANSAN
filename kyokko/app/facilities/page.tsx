@@ -16,7 +16,7 @@ const facilities = [
   {
     title: "Welcome Drink",
     desc: "Setiap tiket masuk sudah termasuk satu minuman gratis yang dapat ditukarkan di area restoran atau bar.",
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+    image: "/images/drink.jpeg",
   },
 
   {
