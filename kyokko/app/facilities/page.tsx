@@ -91,7 +91,8 @@ export default function FacilitiesPage() {
 
                 <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
-            </div>
+                </div>
+              </div>
           ))}
         </div>
       </section>
