@@ -58,7 +58,7 @@ const penginapan = [
   {
     title: "Deluxe Room",
     price: 550000,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+    image: "/images/deluxe.jpeg",
 
     desc: "Kamar luas dengan desain modern dekat pantai.",
   },
