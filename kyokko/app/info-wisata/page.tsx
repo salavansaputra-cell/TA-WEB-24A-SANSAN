@@ -66,7 +66,7 @@ const penginapan = [
   {
     title: "Private Villa",
     price: 1200000,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+    image: "/images/villa.jpeg",
 
     desc: "Villa private eksklusif dengan pengalaman menginap mewah.",
   },
