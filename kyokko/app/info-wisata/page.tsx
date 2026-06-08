@@ -38,7 +38,7 @@ const wisata = [
     title: "Paddle Board",
     weekday: 40000,
     weekend: 60000,
-    image: "https://images.unsplash.com/photo-1521335629791-ce4aec67dd53",
+    image: "/images/paddleboard.jpg",
 
     desc: "Aktivitas paddle board seru untuk menikmati suasana pantai.",
 
