@@ -1,10 +1,14 @@
+//Mengaktifkan fitur interaktif seperti localStorage dan onClick.
 "use client";
+import Image from "next/image";
 
+//Membuat tipe data untuk item reservasi.
 type ReservasiItem = {
   name: string;
   price: number;
 };
 
+//Menyimpan data aktivitas wisata.
 const wisata = [
   {
     title: "Tiket Masuk",
@@ -46,6 +50,7 @@ const wisata = [
   },
 ];
 
+//Menyimpan data penginapan.
 const penginapan = [
   {
     title: "Standard Room",
@@ -73,24 +78,32 @@ const penginapan = [
 ];
 
 export default function InfoWisataPage() {
+  //Menambahkan item ke daftar reservasi.
   const addToReservasi = (item: ReservasiItem) => {
     const stored = localStorage.getItem("reservasiCart");
 
+    //Mengubah data JSON menjadi array.
     const reservasi: ReservasiItem[] = stored ? JSON.parse(stored) : [];
 
+    //Menambahkan item baru ke reservasi.
     reservasi.push(item);
 
+    //Mengambil data reservasi yang tersimpan.
     localStorage.setItem("reservasiCart", JSON.stringify(reservasi));
 
+    //Menampilkan notifikasi berhasil.
     alert(`${item.name} berhasil ditambahkan ke reservasi 🎉`);
 
     // TIDAK redirect lagi
   };
 
   return (
+    //Membuat background halaman, tinggi penuh layar, dan jarak atas.
     <main className="bg-gray-50 min-h-screen pt-28">
       {/* HERO */}
       <section className="text-center px-6 mb-16">
+
+        {/* Membuat judul besar dan tebal. */}
         <h1 className="text-4xl md:text-5xl font-bold mb-5">
           Info Wisata Kyokko Beach 🌊
         </h1>
@@ -105,16 +118,23 @@ export default function InfoWisataPage() {
       <section className="max-w-7xl mx-auto px-6 mb-24">
         <h2 className="text-3xl font-bold mb-8">Aktivitas Wisata 🎟️</h2>
 
+        {/* Membuat layout grid responsif. */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {wisata.map((item, index) => (
             <div
               key={index}
+
+              // Membuat card dengan sudut bulat, bayangan, dan animasi hover.
               className="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                className="w-full h-64 object-cover"
+                width={600}
+                height={384}
+
+                //Mengatur ukuran gambar agar memenuhi card.
+                className="w-full h-100 object-cover"
               />
 
               <div className="p-6">
@@ -123,11 +143,14 @@ export default function InfoWisataPage() {
                 <p className="text-gray-600 mb-4">{item.desc}</p>
 
                 <div className="mb-4 space-y-2">
+
+                  {/* Menampilkan harga weekday dengan background biru. */}
                   <div className="bg-blue-100 rounded-lg p-3">
                     Weekday: Rp
                     {item.weekday.toLocaleString("id-ID")}
                   </div>
 
+                  {/* Menampilkan harga weekend dengan background pink. */}
                   <div className="bg-pink-100 rounded-lg p-3">
                     Weekend: Rp
                     {item.weekend.toLocaleString("id-ID")}
@@ -140,6 +163,8 @@ export default function InfoWisataPage() {
                   {item.include.map((inc, i) => (
                     <div
                       key={i}
+
+                      //Menampilkan daftar fasilitas.
                       className="bg-gray-100 rounded-lg p-2 mb-2 text-sm"
                     >
                       ✅ {inc}
@@ -154,6 +179,8 @@ export default function InfoWisataPage() {
                       price: item.weekday,
                     })
                   }
+
+                  //Membuat tombol reservasi dengan efek hover.
                   className="w-full bg-blue-500 text-white py-3 rounded-xl hover:bg-blue-600 transition"
                 >
                   Tambah ke Reservasi
@@ -169,14 +196,18 @@ export default function InfoWisataPage() {
         <h2 className="text-3xl font-bold mb-8">Penginapan 🏨</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
+
+          {/* Menampilkan data penginapan secara otomatis. */}
           {penginapan.map((room, index) => (
             <div
               key={index}
               className="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
             >
-              <img
+              <Image
                 src={room.image}
                 alt={room.title}
+                width={600}
+                height={384}
                 className="w-full h-64 object-cover"
               />
 
