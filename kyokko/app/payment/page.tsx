@@ -27,6 +27,38 @@ export default function PaymentPage() {
 
   const [selectedMethod, setSelectedMethod] = useState("");
 
+  const [buktiTransfer, setBuktiTransfer] = useState<File | null>(null);
+
+  const handlePayment = () => {
+    if (!selectedMethod) {
+      alert("Pilih metode pembayaran terlebih dahulu!");
+      return;
+    }
+
+    if (!buktiTransfer) {
+      alert("Silakan upload bukti pembayaran!");
+      return;
+    }
+
+    if (!data) return;
+
+    const pesanan = {
+      ...data,
+      metodePembayaran: selectedMethod,
+      status: "Menunggu Verifikasi",
+      tanggalPesan: new Date().toLocaleString("id-ID"),
+      buktiTransfer: buktiTransfer.name,
+    };
+
+    localStorage.setItem("pesanan", JSON.stringify(pesanan));
+
+    localStorage.removeItem("paymentData");
+
+    localStorage.removeItem("reservasiCart");
+
+    router.push("/pesanan");
+  };
+
   if (!data) {
     return (
       <main className="min-h-screen flex items-center justify-center">
@@ -47,7 +79,7 @@ export default function PaymentPage() {
       </section>
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
-        {/* DETAIL RESERVASI */}
+        {/* DETAIL PESANAN */}
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
 
@@ -90,7 +122,6 @@ export default function PaymentPage() {
           <h2 className="text-2xl font-bold mb-6">Metode Pembayaran</h2>
 
           <div className="space-y-4">
-            {/* TRANSFER BANK */}
             <button
               onClick={() => setSelectedMethod("bank")}
               className={`w-full border rounded-2xl p-4 text-left transition ${
@@ -102,7 +133,6 @@ export default function PaymentPage() {
               🏦 Transfer Bank
             </button>
 
-            {/* QRIS */}
             <button
               onClick={() => setSelectedMethod("qris")}
               className={`w-full border rounded-2xl p-4 text-left transition ${
@@ -114,7 +144,6 @@ export default function PaymentPage() {
               📱 QRIS
             </button>
 
-            {/* E-WALLET */}
             <button
               onClick={() => setSelectedMethod("ewallet")}
               className={`w-full border rounded-2xl p-4 text-left transition ${
@@ -127,7 +156,8 @@ export default function PaymentPage() {
             </button>
           </div>
 
-          {/* DETAIL BANK */}
+          {/* DETAIL PEMBAYARAN */}
+
           {selectedMethod === "bank" && (
             <div className="mt-6 bg-blue-50 p-5 rounded-2xl">
               <h3 className="font-bold mb-3">Transfer Bank</h3>
@@ -142,7 +172,6 @@ export default function PaymentPage() {
             </div>
           )}
 
-          {/* QRIS */}
           {selectedMethod === "qris" && (
             <div className="mt-6 bg-green-50 p-5 rounded-2xl text-center">
               <h3 className="font-bold mb-4">Scan QRIS</h3>
@@ -159,7 +188,6 @@ export default function PaymentPage() {
             </div>
           )}
 
-          {/* E-WALLET */}
           {selectedMethod === "ewallet" && (
             <div className="mt-6 bg-purple-50 p-5 rounded-2xl">
               <h3 className="font-bold mb-3">E-Wallet</h3>
@@ -173,6 +201,34 @@ export default function PaymentPage() {
               <p>ShopeePay : 08123456789</p>
             </div>
           )}
+
+          {/* UPLOAD BUKTI */}
+
+          <div className="mt-8">
+            <label className="block font-semibold mb-2">
+              Upload Bukti Pembayaran
+            </label>
+
+            <input
+              type="file"
+              accept="image/*,.pdf"
+              onChange={(e) => setBuktiTransfer(e.target.files?.[0] || null)}
+              className="w-full border rounded-xl p-3"
+            />
+
+            {buktiTransfer && (
+              <p className="text-green-600 text-sm mt-2">
+                ✓ {buktiTransfer.name}
+              </p>
+            )}
+          </div>
+
+          <button
+            onClick={handlePayment}
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-2xl font-semibold mt-8 transition"
+          >
+            Saya Sudah Membayar
+          </button>
         </div>
       </div>
     </main>
