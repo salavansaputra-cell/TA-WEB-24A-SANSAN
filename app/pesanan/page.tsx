@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Link from "next/link";
 
-// ✅ TYPE DATA
 type Pesanan = {
   nama: string;
   nomorHp: string;
@@ -19,50 +18,31 @@ type Pesanan = {
 };
 
 export default function PesananPage() {
-  return <div>Pesanan Saya</div>;
-}
-  // ✅ STATE SUDAH ADA TYPE
-  const [data, setData] = useState<Reservasi[]>(() => {
-    // ✅ cek login admin
-    const role = localStorage.getItem("role");
+  const [pesanan] = useState<Pesanan[]>(() => {
+    if (typeof window !== "undefined") {
+      const data = localStorage.getItem("pesanan");
 
-    if (role !== "admin") {
-      return [];
+      return data ? JSON.parse(data) : [];
     }
 
-    // ✅ ambil data reservasi
-    const stored = localStorage.getItem("reservasi");
-
-    let reservasiData: Reservasi[] = [];
-
-    if (stored) {
-      try {
-        reservasiData = JSON.parse(stored);
-      } catch (error) {
-        console.error("Error parsing data:", error);
-        reservasiData = [];
-      }
-    }
-
-    return reservasiData;
+    return [];
   });
 
-  useEffect(() => {
-    // ✅ cek login admin
-    const role = localStorage.getItem("role");
+  if (pesanan.length === 0) {
+    return (
+      <main className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
+        <div className="bg-white p-10 rounded-3xl shadow text-center">
+          <h2 className="text-3xl font-bold mb-4">Tidak Ada Pesanan</h2>
 
-    if (role !== "admin") {
-      router.push("/login");
-    }
-  }, [router]);
-  // ✅ DELETE DATA
-  const handleDelete = (index: number) => {
-    const newData = data.filter((_, i) => i !== index);
-    setData(newData);
-    localStorage.setItem("reservasi", JSON.stringify(newData));
-  };
-  // ✅ TOTAL ORANG (BONUS BIAR KEREN)
-  const totalOrang = data.reduce((total, item) => {
-    return total + Number(item.orang);
-  }, 0); 
-}
+          <p className="text-gray-600 mb-6">Anda belum memiliki reservasi.</p>
+
+          <Link
+            href="/"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl"
+          >
+            🏠 Kembali ke Home
+          </Link>
+        </div>
+      </main>
+    );
+  }
