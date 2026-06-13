@@ -115,6 +115,15 @@ export default function DashboardAdmin() {
                       {item.status}
                     </span>
                   </td>
+
+                  <td className="p-4 text-center">
+                    <button
+                      onClick={() => handleHapus(index)}
+                      className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl"
+                    >
+                      Hapus
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
