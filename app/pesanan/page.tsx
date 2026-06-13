@@ -48,27 +48,22 @@ export default function PesananPage() {
   }
 
   return (
-  <main className="min-h-screen bg-gray-50 pt-28 pb-20 px-6">
-    <div className="max-w-5xl mx-auto">
-      <h1>Pesanan Saya</h1>
-    </div>
-  </main>
-);
-<div className="text-center mb-10">
-  <h1 className="text-4xl font-bold">
-    Pesanan Saya
-  </h1>
+    <main className="min-h-screen bg-gray-50 pt-28 pb-20 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold">Pesanan Saya</h1>
 
-  <p className="text-gray-600 mt-2">
-    Riwayat reservasi Kyokko Beach
-  </p>
-</div>
-{pesanan.map((item, index) => (
-  <div key={index}>
-    Pesanan #{index + 1}
-  </div>
-))}
-<div className="bg-linear-to-r from-blue-500 to-cyan-500 text-white p-8">
+          <p className="text-gray-600 mt-2">Riwayat reservasi Kyokko Beach</p>
+        </div>
+
+        <div className="space-y-8">
+          {pesanan.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-3xl shadow overflow-hidden"
+            >
+              {/* HEADER */}
+              <div className="bg-linear-to-r from-blue-500 to-cyan-500 text-white p-8">
                 <div className="flex flex-col md:flex-row justify-between gap-4">
                   <div>
                     <h2 className="text-3xl font-bold">Pesanan #{index + 1}</h2>
@@ -85,4 +80,74 @@ export default function PesananPage() {
                   </div>
                 </div>
               </div>
-}
+
+              {/* ISI */}
+              <div className="p-8">
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="font-bold text-xl mb-4">👤 Data Pemesan</h3>
+
+                    <div className="space-y-3">
+                      <p>
+                        <strong>Nama:</strong> {item.nama}
+                      </p>
+
+                      <p>
+                        <strong>Nomor HP:</strong> {item.nomorHp}
+                      </p>
+
+                      <p>
+                        <strong>Tanggal Pesan:</strong> {item.tanggalPesan}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-xl mb-4">
+                      🌊 Detail Kunjungan
+                    </h3>
+
+                    <div className="space-y-3">
+                      <p>
+                        <strong>Check In:</strong> {item.checkIn}
+                      </p>
+
+                      <p>
+                        <strong>Check Out:</strong> {item.checkOut}
+                      </p>
+
+                      <p>
+                        <strong>Lama Menginap:</strong> {item.jumlahMalam} malam
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t mt-8 pt-8">
+                  <h3 className="font-bold text-xl mb-4">💳 Pembayaran</h3>
+
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div>
+                      <p className="text-gray-500">Metode</p>
+
+                      <p className="font-semibold capitalize">
+                        {item.metodePembayaran}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-gray-500">Bukti Transfer</p>
+
+                      <p className="font-semibold text-green-600">
+                        ✓ {item.buktiTransfer}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-gray-500">Total</p>
+
+                      <p className="font-bold text-2xl text-blue-600">
+                        Rp
+                        {item.total.toLocaleString("id-ID")}
+                      </p>
+               </div>
