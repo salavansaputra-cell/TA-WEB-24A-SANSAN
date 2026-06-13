@@ -126,6 +126,21 @@ export default function PaymentPage() {
               💳 DANA / OVO / GoPay / ShopeePay
             </button>
           </div>
+
+          {/* DETAIL PEMBAYARAN BANK */}
+          {selectedMethod === "bank" && (
+            <div className="mt-6 bg-blue-50 p-5 rounded-2xl">
+              <h3 className="font-bold mb-3">Transfer Bank</h3>
+
+              <p>BCA : 1234567890</p>
+
+              <p>BRI : 9876543210</p>
+
+              <p>Mandiri : 4567891230</p>
+
+              <p className="mt-2 text-sm text-gray-600">a.n Kyokko Beach</p>
+            </div>
+          )}
         </div>
       </div>
     </main>
