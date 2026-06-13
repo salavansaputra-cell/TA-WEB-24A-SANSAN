@@ -113,6 +113,18 @@ export default function PaymentPage() {
             >
               📱 QRIS
             </button>
+
+            {/* E-WALLET */}
+            <button
+              onClick={() => setSelectedMethod("ewallet")}
+              className={`w-full border rounded-2xl p-4 text-left transition ${
+                selectedMethod === "ewallet"
+                  ? "border-purple-500 bg-purple-50"
+                  : "hover:bg-gray-50"
+              }`}
+            >
+              💳 DANA / OVO / GoPay / ShopeePay
+            </button>
           </div>
         </div>
       </div>
