@@ -55,4 +55,8 @@ export default function AdminPage() {
     setData(newData);
     localStorage.setItem("reservasi", JSON.stringify(newData));
   };
+  // ✅ TOTAL ORANG (BONUS BIAR KEREN)
+  const totalOrang = data.reduce((total, item) => {
+    return total + Number(item.orang);
+  }, 0);
 }
