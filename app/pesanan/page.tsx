@@ -63,4 +63,9 @@ export default function PesananPage() {
     Riwayat reservasi Kyokko Beach
   </p>
 </div>
+{pesanan.map((item, index) => (
+  <div key={index}>
+    Pesanan #{index + 1}
+  </div>
+))}
 }
