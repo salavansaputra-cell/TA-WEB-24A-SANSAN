@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type PaymentData = {
   nama: string;
@@ -13,6 +13,8 @@ type PaymentData = {
 };
 
 export default function PaymentPage() {
+  const router = useRouter();
+
   const [data] = useState<PaymentData | null>(() => {
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("paymentData");
@@ -22,6 +24,9 @@ export default function PaymentPage() {
 
     return null;
   });
+
+  // COMMIT 9
+  const [selectedMethod, setSelectedMethod] = useState("");
 
   if (!data) {
     return (
@@ -33,6 +38,7 @@ export default function PaymentPage() {
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
+      {/* HEADER */}
       <section className="text-center mb-10">
         <h1 className="text-4xl font-bold">Payment Kyokko Beach 💳</h1>
 
@@ -43,7 +49,6 @@ export default function PaymentPage() {
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
         {/* DETAIL RESERVASI */}
-
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
 
@@ -78,6 +83,17 @@ export default function PaymentPage() {
                 {data.total.toLocaleString("id-ID")}
               </span>
             </div>
+          </div>
+        </div>
+
+        {/* PEMBAYARAN */}
+        <div className="bg-white rounded-3xl shadow p-8">
+          <h2 className="text-2xl font-bold mb-6">Metode Pembayaran</h2>
+
+          <div className="bg-gray-100 rounded-2xl p-4">
+            <p className="text-gray-600">
+              Pilihan metode pembayaran akan ditambahkan pada commit berikutnya.
+            </p>
           </div>
         </div>
       </div>
