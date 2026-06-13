@@ -10,10 +10,13 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
+    // username & password admin
     if (username === "admin" && password === "kyokko123") {
       localStorage.setItem("adminLogin", "true");
 
       alert("Login berhasil!");
+
+      router.push("/admin/dashboard");
     } else {
       alert("Username atau password salah!");
     }
@@ -59,6 +62,14 @@ export default function AdminLoginPage() {
           >
             Login
           </button>
+        </div>
+
+        <div className="mt-6 text-center text-sm text-gray-500">
+          Demo Login:
+          <br />
+          Username: <strong>admin</strong>
+          <br />
+          Password: <strong>kyokko123</strong>
         </div>
       </div>
     </main>
