@@ -39,6 +39,8 @@ export default function PaymentPage() {
           Selesaikan pembayaran reservasi Anda
         </p>
       </section>
+
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8"></div>
     </main>
   );
 }
