@@ -16,6 +16,7 @@ export default function ReservasiPage() {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
 
+  // ambil cart dari localStorage
   const [cart, setCart] = useState<CartItem[]>(() => {
     if (typeof window !== "undefined") {
       const data = localStorage.getItem("reservasiCart");
@@ -26,6 +27,7 @@ export default function ReservasiPage() {
     return [];
   });
 
+  // hitung jumlah malam
   const jumlahMalam =
     checkIn && checkOut
       ? Math.max(
@@ -37,24 +39,31 @@ export default function ReservasiPage() {
         )
       : 1;
 
+  // cek weekday / weekend
   const isWeekend = checkIn
     ? [0, 6].includes(new Date(checkIn).getDay())
     : false;
 
+  // hitung harga
   const getPrice = (item: CartItem) => {
+    // tiket masuk
     if (item.name === "Tiket Masuk") {
       return isWeekend ? 100000 : 80000;
     }
 
+    // penginapan
     if (item.name.includes("Room") || item.name.includes("Villa")) {
       return item.price * jumlahMalam;
     }
 
+    // snorkeling / paddle
     return item.price;
   };
 
+  // total harga
   const total = cart.reduce((total, item) => total + getPrice(item), 0);
 
+  // hapus item
   const removeItem = (index: number) => {
     const updated = cart.filter((_, i) => i !== index);
 
@@ -63,25 +72,36 @@ export default function ReservasiPage() {
     localStorage.setItem("reservasiCart", JSON.stringify(updated));
   };
 
-  // COMMIT 1
+  // tombol reservasi & payment
   const handlePayment = () => {
     if (!nama || !nomorHp || !checkIn || !checkOut) {
       alert("Lengkapi semua data terlebih dahulu!");
-
       return;
     }
 
     if (cart.length === 0) {
       alert("Belum ada item reservasi!");
-
       return;
     }
+
+    const reservasiData = {
+      nama,
+      nomorHp,
+      checkIn,
+      checkOut,
+      jumlahMalam,
+      cart,
+      total,
+    };
+
+    localStorage.setItem("paymentData", JSON.stringify(reservasiData));
 
     router.push("/payment");
   };
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
+      {/* HEADER */}
       <section className="text-center mb-10">
         <h1 className="text-4xl font-bold">Reservasi Kyokko Beach 🌊</h1>
 
@@ -89,6 +109,7 @@ export default function ReservasiPage() {
       </section>
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+        {/* FORM */}
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Data Pemesan</h2>
 
@@ -137,6 +158,7 @@ export default function ReservasiPage() {
           </div>
         </div>
 
+        {/* DETAIL */}
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
 
@@ -167,6 +189,7 @@ export default function ReservasiPage() {
                 </div>
               ))}
 
+              {/* TOTAL */}
               <div className="border-t pt-5 flex justify-between text-2xl font-bold">
                 <span>Total</span>
 
@@ -176,7 +199,7 @@ export default function ReservasiPage() {
                 </span>
               </div>
 
-              {/* COMMIT 1 */}
+              {/* BUTTON */}
               <button
                 onClick={handlePayment}
                 className="w-full bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-2xl font-semibold transition mt-5"
