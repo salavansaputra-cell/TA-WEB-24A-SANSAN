@@ -7,11 +7,12 @@ export default function AdminLoginPage() {
   const router = useRouter();
 
   const [username, setUsername] = useState("");
-
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     if (username === "admin" && password === "kyokko123") {
+      localStorage.setItem("adminLogin", "true");
+
       alert("Login berhasil!");
     } else {
       alert("Username atau password salah!");
@@ -36,7 +37,7 @@ export default function AdminLoginPage() {
               placeholder="Masukkan username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full border rounded-xl p-4 mt-2"
+              className="w-full border rounded-xl p-4 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -48,7 +49,7 @@ export default function AdminLoginPage() {
               placeholder="Masukkan password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full border rounded-xl p-4 mt-2"
+              className="w-full border rounded-xl p-4 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
