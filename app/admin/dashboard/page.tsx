@@ -64,9 +64,13 @@ export default function DashboardAdmin() {
         </button>
       </div>
 
-      {reservasi.length === 0 && (
+      {reservasi.length === 0 ? (
         <div className="bg-white rounded-3xl shadow p-10 text-center text-gray-500 max-w-7xl mx-auto">
           Belum ada data reservasi.
+        </div>
+      ) : (
+        <div className="max-w-7xl mx-auto overflow-x-auto">
+          <table className="w-full bg-white rounded-3xl shadow overflow-hidden"></table>
         </div>
       )}
     </main>
