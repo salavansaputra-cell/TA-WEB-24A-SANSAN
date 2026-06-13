@@ -113,9 +113,36 @@ export default function PaymentPage() {
             >
               📱 QRIS
             </button>
+
+            {/* E-WALLET */}
+            <button
+              onClick={() => setSelectedMethod("ewallet")}
+              className={`w-full border rounded-2xl p-4 text-left transition ${
+                selectedMethod === "ewallet"
+                  ? "border-purple-500 bg-purple-50"
+                  : "hover:bg-gray-50"
+              }`}
+            >
+              💳 DANA / OVO / GoPay / ShopeePay
+            </button>
           </div>
 
-          {/* DETAIL PEMBAYARAN QRIS */}
+          {/* DETAIL BANK */}
+          {selectedMethod === "bank" && (
+            <div className="mt-6 bg-blue-50 p-5 rounded-2xl">
+              <h3 className="font-bold mb-3">Transfer Bank</h3>
+
+              <p>BCA : 1234567890</p>
+
+              <p>BRI : 9876543210</p>
+
+              <p>Mandiri : 4567891230</p>
+
+              <p className="mt-2 text-sm text-gray-600">a.n Kyokko Beach</p>
+            </div>
+          )}
+
+          {/* QRIS */}
           {selectedMethod === "qris" && (
             <div className="mt-6 bg-green-50 p-5 rounded-2xl text-center">
               <h3 className="font-bold mb-4">Scan QRIS</h3>
@@ -133,33 +160,21 @@ export default function PaymentPage() {
           )}
 
           {/* E-WALLET */}
-            <button
-              onClick={() => setSelectedMethod("ewallet")}
-              className={`w-full border rounded-2xl p-4 text-left transition ${
-                selectedMethod === "ewallet"
-                  ? "border-purple-500 bg-purple-50"
-                  : "hover:bg-gray-50"
-              }`}
-            >
-              💳 DANA / OVO / GoPay / ShopeePay
-            </button>
-          </div>
+          {selectedMethod === "ewallet" && (
+            <div className="mt-6 bg-purple-50 p-5 rounded-2xl">
+              <h3 className="font-bold mb-3">E-Wallet</h3>
 
-          {/* DETAIL PEMBAYARAN BANK */}
-          {selectedMethod === "bank" && (
-            <div className="mt-6 bg-blue-50 p-5 rounded-2xl">
-              <h3 className="font-bold mb-3">Transfer Bank</h3>
+              <p>DANA : 08123456789</p>
 
-              <p>BCA : 1234567890</p>
+              <p>OVO : 08123456789</p>
 
-              <p>BRI : 9876543210</p>
+              <p>GoPay : 08123456789</p>
 
-              <p>Mandiri : 4567891230</p>
-
-              <p className="mt-2 text-sm text-gray-600">a.n Kyokko Beach</p>
+              <p>ShopeePay : 08123456789</p>
             </div>
           )}
         </div>
+      </div>
     </main>
   );
 }
