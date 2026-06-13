@@ -91,6 +91,27 @@ export default function DashboardAdmin() {
                 <th className="p-4 text-center">Aksi</th>
               </tr>
             </thead>
+
+            <tbody>
+              {reservasi.map((item, index) => (
+                <tr key={index} className="border-b">
+                  <td className="p-4">{item.nama}</td>
+
+                  <td className="p-4">{item.nomorHp}</td>
+
+                  <td className="p-4">{item.checkIn}</td>
+
+                  <td className="p-4">{item.checkOut}</td>
+
+                  <td className="p-4">
+                    Rp
+                    {item.total.toLocaleString("id-ID")}
+                  </td>
+
+                  <td className="p-4 capitalize">{item.metodePembayaran}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       )}
