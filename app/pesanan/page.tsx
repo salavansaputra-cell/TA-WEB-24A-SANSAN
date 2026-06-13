@@ -12,17 +12,15 @@ type Reservasi = {
 };
 
 export default function AdminPage() {
-  const router = useRouter();
-
   const [data, setData] = useState<Reservasi[]>(() => {
-    const stored = localStorage.getItem("reservasi");
+  const role = localStorage.getItem("role");
 
-    return stored ? JSON.parse(stored) : [];
-  });
+  if (role !== "admin") {
+    return [];
+  }
 
-  return (
-    <div>
-      Dashboard Admin
-    </div>
-  );
+  const stored = localStorage.getItem("reservasi");
+
+  return stored ? JSON.parse(stored) : [];
+});
 }
