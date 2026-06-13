@@ -5,3 +5,11 @@ type Reservasi = {
   tiket: string;
   penginapan: string;
 };
+
+export default function AdminPage() {
+  return (
+    <div>
+      Dashboard Admin
+    </div>
+  );
+}
