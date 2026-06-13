@@ -50,16 +50,18 @@ export default function DashboardAdmin() {
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
-      <h1 className="text-4xl font-bold">Dashboard Admin</h1>
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold">Dashboard Admin</h1>
 
-      <button
-        onClick={handleLogout}
-        className="mt-5 bg-red-500 text-white px-4 py-2 rounded-xl"
-      >
-        Logout
-      </button>
+        <p className="text-gray-600 mt-2">Data Reservasi Kyokko Beach</p>
 
-      <p className="mt-4">Total Data: {reservasi.length}</p>
+        <button
+          onClick={handleLogout}
+          className="mt-5 bg-red-500 text-white px-4 py-2 rounded-xl"
+        >
+          Logout
+        </button>
+      </div>
     </main>
   );
 }
