@@ -19,16 +19,30 @@ export default function AdminLoginPage() {
           <p className="text-gray-600">Kyokko Beach Reservation System</p>
         </div>
 
-        <div>
-          <label className="font-medium">Username</label>
+        <div className="space-y-5">
+          <div>
+            <label className="font-medium">Username</label>
 
-          <input
-            type="text"
-            placeholder="Masukkan username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="w-full border rounded-xl p-4 mt-2"
-          />
+            <input
+              type="text"
+              placeholder="Masukkan username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="w-full border rounded-xl p-4 mt-2"
+            />
+          </div>
+
+          <div>
+            <label className="font-medium">Password</label>
+
+            <input
+              type="password"
+              placeholder="Masukkan password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full border rounded-xl p-4 mt-2"
+            />
+          </div>
         </div>
       </div>
     </main>
