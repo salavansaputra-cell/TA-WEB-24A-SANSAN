@@ -23,8 +23,17 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
-      <div className="bg-white shadow-xl rounded-3xl p-10 w-full max-w-md">
+    <main
+      className="min-h-screen flex items-center justify-center px-6 bg-cover bg-center relative"
+      style={{
+        backgroundImage: "url('/images/pantai.jpg')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Login Card */}
+      <div className="relative z-10 bg-white shadow-xl rounded-3xl p-10 w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">Admin Login</h1>
 

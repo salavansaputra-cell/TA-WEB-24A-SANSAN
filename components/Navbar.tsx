@@ -49,7 +49,7 @@ export default function Navbar() {
 
           <li>
             <Link
-              href="/login"
+              href="/admin/login"
               className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
             >
               Login
@@ -101,7 +101,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/login" onClick={() => setMenuOpen(false)}>
+              <Link href="/admin/login" onClick={() => setMenuOpen(false)}>
                 Login
               </Link>
             </li>
