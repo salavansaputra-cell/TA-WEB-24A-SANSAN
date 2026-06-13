@@ -40,7 +40,11 @@ export default function PaymentPage() {
         </p>
       </section>
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8"></div>
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+        <div className="bg-white rounded-3xl shadow p-8">
+          <h2 className="text-2xl font-bold mb-6">Detail Reservasi</h2>
+        </div>
+      </div>
     </main>
   );
 }
