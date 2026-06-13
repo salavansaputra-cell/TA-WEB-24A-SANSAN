@@ -46,3 +46,13 @@ export default function PesananPage() {
       </main>
     );
   }
+
+  return (
+  <main className="min-h-screen bg-gray-50 pt-28 pb-20 px-6">
+    <div className="max-w-5xl mx-auto">
+      <h1>Pesanan Saya</h1>
+    </div>
+  </main>
+);
+
+}
