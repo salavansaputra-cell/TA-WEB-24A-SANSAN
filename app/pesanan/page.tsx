@@ -4,17 +4,23 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 // ✅ TYPE DATA
-type Reservasi = {
+type Pesanan = {
   nama: string;
-  tanggal: string;
-  orang: string;
-  tiket: string;
-  penginapan: string;
+  nomorHp: string;
+  checkIn: string;
+  checkOut: string;
+  jumlahMalam: number;
+  total: number;
+  metodePembayaran: string;
+  status: string;
+  tanggalPesan: string;
+  buktiTransfer: string;
+  bookingCode: string;
 };
 
-export default function AdminPage() {
-  const router = useRouter();
-
+export default function PesananPage() {
+  return <div>Pesanan Saya</div>;
+}
   // ✅ STATE SUDAH ADA TYPE
   const [data, setData] = useState<Reservasi[]>(() => {
     // ✅ cek login admin
@@ -58,5 +64,5 @@ export default function AdminPage() {
   // ✅ TOTAL ORANG (BONUS BIAR KEREN)
   const totalOrang = data.reduce((total, item) => {
     return total + Number(item.orang);
-  }, 0);
+  }, 0); 
 }
