@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
+// ✅ TYPE DATA
 type Reservasi = {
   nama: string;
   tanggal: string;
@@ -12,15 +13,39 @@ type Reservasi = {
 };
 
 export default function AdminPage() {
+  const router = useRouter();
+
+  // ✅ STATE SUDAH ADA TYPE
   const [data, setData] = useState<Reservasi[]>(() => {
-  const role = localStorage.getItem("role");
+    // ✅ cek login admin
+    const role = localStorage.getItem("role");
 
-  if (role !== "admin") {
-    return [];
-  }
+    if (role !== "admin") {
+      return [];
+    }
 
-  const stored = localStorage.getItem("reservasi");
+    // ✅ ambil data reservasi
+    const stored = localStorage.getItem("reservasi");
 
-  return stored ? JSON.parse(stored) : [];
-});
-}
+    let reservasiData: Reservasi[] = [];
+
+    if (stored) {
+      try {
+        reservasiData = JSON.parse(stored);
+      } catch (error) {
+        console.error("Error parsing data:", error);
+        reservasiData = [];
+      }
+    }
+
+    return reservasiData;
+  });
+
+  useEffect(() => {
+    // ✅ cek login admin
+    const role = localStorage.getItem("role");
+
+    if (role !== "admin") {
+      router.push("/login");
+    }
+  }, [router]);
