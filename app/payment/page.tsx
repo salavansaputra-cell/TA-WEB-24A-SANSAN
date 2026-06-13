@@ -35,26 +35,40 @@ export default function PaymentPage() {
       return;
     }
 
-    if (!buktiTransfer) {
-      alert("Silakan upload bukti pembayaran!");
-      return;
-    }
-
-    if (!data) return;
-
-    const pesanan = {
+    const dataPesanan = {
       ...data,
       metodePembayaran: selectedMethod,
       status: "Menunggu Verifikasi",
-      tanggalPesan: new Date().toLocaleString("id-ID"),
-      buktiTransfer: buktiTransfer.name,
+      tanggalPesan: new Date().toLocaleDateString("id-ID"),
+      buktiTransfer: "Sudah diunggah",
+      bookingCode: "KYO-" + Date.now().toString().slice(-6),
     };
 
-    localStorage.setItem("pesanan", JSON.stringify(pesanan));
+    const oldPesanan = JSON.parse(localStorage.getItem("pesanan") || "[]");
 
+    oldPesanan.push(dataPesanan);
+
+    localStorage.setItem("pesanan", JSON.stringify(oldPesanan));
+
+    router.push("/pesanan");
+
+    // simpan ke riwayat pesanan
+    oldPesanan.push(dataPesanan);
+
+    localStorage.setItem("pesanan", JSON.stringify(oldPesanan));
+
+    // simpan ke dashboard admin
+    const oldAdmin = JSON.parse(localStorage.getItem("adminReservasi") || "[]");
+
+    oldAdmin.push(dataPesanan);
+
+    localStorage.setItem("adminReservasi", JSON.stringify(oldAdmin));
+
+    // hapus cart
+    localStorage.removeItem("reservasiCart");
     localStorage.removeItem("paymentData");
 
-    localStorage.removeItem("reservasiCart");
+    alert("Pembayaran berhasil 🎉");
 
     router.push("/pesanan");
   };
