@@ -150,4 +150,23 @@ export default function PesananPage() {
                         Rp
                         {item.total.toLocaleString("id-ID")}
                       </p>
-               </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            href="/"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold"
+          >
+            🏠 Kembali ke Home
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
+}
