@@ -36,6 +36,7 @@ export default function DashboardAdmin() {
 
   const handleLogout = () => {
     localStorage.removeItem("adminLogin");
+
     router.push("/admin/login");
   };
 
@@ -70,7 +71,27 @@ export default function DashboardAdmin() {
         </div>
       ) : (
         <div className="max-w-7xl mx-auto overflow-x-auto">
-          <table className="w-full bg-white rounded-3xl shadow overflow-hidden"></table>
+          <table className="w-full bg-white rounded-3xl shadow overflow-hidden">
+            <thead className="bg-blue-500 text-white">
+              <tr>
+                <th className="p-4 text-left">Nama</th>
+
+                <th className="p-4 text-left">Nomor HP</th>
+
+                <th className="p-4 text-left">Check In</th>
+
+                <th className="p-4 text-left">Check Out</th>
+
+                <th className="p-4 text-left">Total</th>
+
+                <th className="p-4 text-left">Pembayaran</th>
+
+                <th className="p-4 text-left">Status</th>
+
+                <th className="p-4 text-center">Aksi</th>
+              </tr>
+            </thead>
+          </table>
         </div>
       )}
     </main>
