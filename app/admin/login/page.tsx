@@ -10,5 +10,9 @@ export default function AdminLoginPage() {
 
   const [password, setPassword] = useState("");
 
-  return <main>Admin Login</main>;
+  return (
+    <main className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
+      <div className="bg-white shadow-xl rounded-3xl p-10 w-full max-w-md"></div>
+    </main>
+  );
 }
