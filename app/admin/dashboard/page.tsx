@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { useRouter } from "next/navigation";
 
 type ReservasiAdmin = {
@@ -50,6 +51,7 @@ export default function DashboardAdmin() {
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
+      {/* HEADER */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-10">
         <div>
           <h1 className="text-4xl font-bold">Dashboard Admin</h1>
