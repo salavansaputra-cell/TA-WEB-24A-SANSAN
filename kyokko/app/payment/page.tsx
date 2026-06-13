@@ -31,8 +31,14 @@ export default function PaymentPage() {
   }
 
   return (
-    <main>
-      <h1>Payment Kyokko Beach</h1>
+    <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
+      <section className="text-center mb-10">
+        <h1 className="text-4xl font-bold">Payment Kyokko Beach 💳</h1>
+
+        <p className="text-gray-600 mt-2">
+          Selesaikan pembayaran reservasi Anda
+        </p>
+      </section>
     </main>
   );
 }
