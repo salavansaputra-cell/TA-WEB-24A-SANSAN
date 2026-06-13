@@ -49,3 +49,10 @@ export default function AdminPage() {
       router.push("/login");
     }
   }, [router]);
+  // ✅ DELETE DATA
+  const handleDelete = (index: number) => {
+    const newData = data.filter((_, i) => i !== index);
+    setData(newData);
+    localStorage.setItem("reservasi", JSON.stringify(newData));
+  };
+}
