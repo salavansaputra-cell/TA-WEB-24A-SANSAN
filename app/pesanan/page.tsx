@@ -14,7 +14,11 @@ type Reservasi = {
 export default function AdminPage() {
   const router = useRouter();
 
-  const [data, setData] = useState<Reservasi[]>([]);
+  const [data, setData] = useState<Reservasi[]>(() => {
+    const stored = localStorage.getItem("reservasi");
+
+    return stored ? JSON.parse(stored) : [];
+  });
 
   return (
     <div>
