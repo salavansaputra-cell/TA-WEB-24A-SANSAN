@@ -36,7 +36,6 @@ export default function DashboardAdmin() {
 
   const handleLogout = () => {
     localStorage.removeItem("adminLogin");
-
     router.push("/admin/login");
   };
 
@@ -64,6 +63,12 @@ export default function DashboardAdmin() {
           Logout
         </button>
       </div>
+
+      {reservasi.length === 0 && (
+        <div className="bg-white rounded-3xl shadow p-10 text-center text-gray-500 max-w-7xl mx-auto">
+          Belum ada data reservasi.
+        </div>
+      )}
     </main>
   );
 }
