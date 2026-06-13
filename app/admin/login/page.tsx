@@ -6,9 +6,7 @@ import { useRouter } from "next/navigation";
 export default function AdminLoginPage() {
   const router = useRouter();
 
-  return (
-    <main>
-      Admin Login
-    </main>
-  );
+  const [username, setUsername] = useState("");
+
+  return <main>Admin Login</main>;
 }
