@@ -25,7 +25,6 @@ export default function PaymentPage() {
     return null;
   });
 
-  // COMMIT 9
   const [selectedMethod, setSelectedMethod] = useState("");
 
   if (!data) {
@@ -90,10 +89,17 @@ export default function PaymentPage() {
         <div className="bg-white rounded-3xl shadow p-8">
           <h2 className="text-2xl font-bold mb-6">Metode Pembayaran</h2>
 
-          <div className="bg-gray-100 rounded-2xl p-4">
-            <p className="text-gray-600">
-              Pilihan metode pembayaran akan ditambahkan pada commit berikutnya.
-            </p>
+          <div className="space-y-4">
+            <button
+              onClick={() => setSelectedMethod("bank")}
+              className={`w-full border rounded-2xl p-4 text-left transition ${
+                selectedMethod === "bank"
+                  ? "border-blue-500 bg-blue-50"
+                  : "hover:bg-gray-50"
+              }`}
+            >
+              🏦 Transfer Bank
+            </button>
           </div>
         </div>
       </div>
