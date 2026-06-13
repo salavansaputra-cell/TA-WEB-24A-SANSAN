@@ -90,6 +90,7 @@ export default function PaymentPage() {
           <h2 className="text-2xl font-bold mb-6">Metode Pembayaran</h2>
 
           <div className="space-y-4">
+            {/* TRANSFER BANK */}
             <button
               onClick={() => setSelectedMethod("bank")}
               className={`w-full border rounded-2xl p-4 text-left transition ${
@@ -99,6 +100,18 @@ export default function PaymentPage() {
               }`}
             >
               🏦 Transfer Bank
+            </button>
+
+            {/* QRIS */}
+            <button
+              onClick={() => setSelectedMethod("qris")}
+              className={`w-full border rounded-2xl p-4 text-left transition ${
+                selectedMethod === "qris"
+                  ? "border-green-500 bg-green-50"
+                  : "hover:bg-gray-50"
+              }`}
+            >
+              📱 QRIS
             </button>
           </div>
         </div>
