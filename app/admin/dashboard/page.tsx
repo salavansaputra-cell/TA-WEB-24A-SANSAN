@@ -109,6 +109,12 @@ export default function DashboardAdmin() {
                   </td>
 
                   <td className="p-4 capitalize">{item.metodePembayaran}</td>
+
+                  <td className="p-4">
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                      {item.status}
+                    </span>
+                  </td>
                 </tr>
               ))}
             </tbody>
