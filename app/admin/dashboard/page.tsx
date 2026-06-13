@@ -50,14 +50,16 @@ export default function DashboardAdmin() {
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold">Dashboard Admin</h1>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-10">
+        <div>
+          <h1 className="text-4xl font-bold">Dashboard Admin</h1>
 
-        <p className="text-gray-600 mt-2">Data Reservasi Kyokko Beach</p>
+          <p className="text-gray-600 mt-2">Data Reservasi Kyokko Beach</p>
+        </div>
 
         <button
           onClick={handleLogout}
-          className="mt-5 bg-red-500 text-white px-4 py-2 rounded-xl"
+          className="mt-4 md:mt-0 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl transition"
         >
           Logout
         </button>
