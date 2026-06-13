@@ -18,7 +18,7 @@ type ReservasiAdmin = {
 export default function DashboardAdmin() {
   const router = useRouter();
 
-  const [reservasi] = useState<ReservasiAdmin[]>(() => {
+  const [reservasi, setReservasi] = useState<ReservasiAdmin[]>(() => {
     if (typeof window === "undefined") {
       return [];
     }
@@ -38,6 +38,14 @@ export default function DashboardAdmin() {
     localStorage.removeItem("adminLogin");
 
     router.push("/admin/login");
+  };
+
+  const handleHapus = (index: number) => {
+    const updated = reservasi.filter((_, i) => i !== index);
+
+    setReservasi(updated);
+
+    localStorage.setItem("adminReservasi", JSON.stringify(updated));
   };
 
   return (
