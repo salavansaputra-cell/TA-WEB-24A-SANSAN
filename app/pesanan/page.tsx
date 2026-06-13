@@ -46,13 +46,9 @@ export default function PesananPage() {
     return (
       <main className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
         <div className="bg-white p-10 rounded-3xl shadow text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Tidak Ada Pesanan
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Tidak Ada Pesanan</h2>
 
-          <p className="text-gray-600 mb-6">
-            Anda belum memiliki reservasi.
-          </p>
+          <p className="text-gray-600 mb-6">Anda belum memiliki reservasi.</p>
 
           <Link
             href="/"
@@ -68,43 +64,28 @@ export default function PesananPage() {
   return (
     <main className="min-h-screen bg-gray-50 pt-28 pb-20 px-6">
       <div className="max-w-5xl mx-auto">
-
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold">
-            Pesanan Saya
-          </h1>
+          <h1 className="text-4xl font-bold">Pesanan Saya</h1>
 
-          <p className="text-gray-600 mt-2">
-            Riwayat reservasi Kyokko Beach
-          </p>
+          <p className="text-gray-600 mt-2">Riwayat reservasi Kyokko Beach</p>
         </div>
 
         <div className="space-y-8">
-
           {pesanan.map((item, index) => (
             <div
               key={index}
               className="bg-white rounded-3xl shadow overflow-hidden"
             >
-
               {/* Header Card */}
               <div className="bg-linear-to-r from-blue-500 to-cyan-500 text-white p-8">
-
                 <div className="flex flex-col md:flex-row justify-between gap-6">
-
                   <div>
-                    <h2 className="text-3xl font-bold">
-                      Pesanan #{index + 1}
-                    </h2>
+                    <h2 className="text-3xl font-bold">Pesanan #{index + 1}</h2>
 
-                    <p className="text-blue-100 mt-2">
-                      Booking Code
-                    </p>
+                    <p className="text-blue-100 mt-2">Booking Code</p>
 
-                    <p className="font-semibold text-xl">
-                      {item.bookingCode}
-                    </p>
+                    <p className="font-semibold text-xl">{item.bookingCode}</p>
                   </div>
 
                   <div>
@@ -121,39 +102,28 @@ export default function PesananPage() {
                       {item.status}
                     </span>
                   </div>
-
                 </div>
-
               </div>
 
               {/* Isi */}
               <div className="p-8">
-
                 <div className="grid lg:grid-cols-2 gap-8">
-
                   {/* Data Pemesan */}
                   <div>
-                    <h3 className="text-2xl font-bold mb-6">
-                      👤 Data Pemesan
-                    </h3>
+                    <h3 className="text-2xl font-bold mb-6">👤 Data Pemesan</h3>
 
                     <div className="space-y-3">
-
                       <p>
-                        <strong>Nama:</strong>{" "}
-                        {item.nama}
+                        <strong>Nama:</strong> {item.nama}
                       </p>
 
                       <p>
-                        <strong>Nomor HP:</strong>{" "}
-                        {item.nomorHp}
+                        <strong>Nomor HP:</strong> {item.nomorHp}
                       </p>
 
                       <p>
-                        <strong>Tanggal Pesan:</strong>{" "}
-                        {item.tanggalPesan}
+                        <strong>Tanggal Pesan:</strong> {item.tanggalPesan}
                       </p>
-
                     </div>
                   </div>
 
@@ -164,40 +134,30 @@ export default function PesananPage() {
                     </h3>
 
                     <div className="space-y-3">
-
                       <p>
-                        <strong>Check In:</strong>{" "}
-                        {item.checkIn}
+                        <strong>Check In:</strong> {item.checkIn}
                       </p>
 
                       <p>
-                        <strong>Check Out:</strong>{" "}
-                        {item.checkOut}
+                        <strong>Check Out:</strong> {item.checkOut}
                       </p>
 
                       <p>
-                        <strong>Lama Menginap:</strong>{" "}
-                        {item.jumlahMalam} malam
+                        <strong>Lama Menginap:</strong> {item.jumlahMalam} malam
                       </p>
-
                     </div>
                   </div>
-
                 </div>
 
                 {/* Pembayaran */}
                 <div className="border-t mt-8 pt-8">
-
                   <h3 className="text-2xl font-bold mb-6">
                     💳 Informasi Pembayaran
                   </h3>
 
                   <div className="grid md:grid-cols-3 gap-6">
-
                     <div>
-                      <p className="text-gray-500">
-                        Metode Pembayaran
-                      </p>
+                      <p className="text-gray-500">Metode Pembayaran</p>
 
                       <p className="font-semibold capitalize">
                         {item.metodePembayaran}
@@ -205,9 +165,7 @@ export default function PesananPage() {
                     </div>
 
                     <div>
-                      <p className="text-gray-500">
-                        Bukti Pembayaran
-                      </p>
+                      <p className="text-gray-500">Bukti Pembayaran</p>
 
                       <p className="font-semibold text-green-600">
                         ✓ {item.buktiTransfer}
@@ -215,39 +173,29 @@ export default function PesananPage() {
                     </div>
 
                     <div>
-                      <p className="text-gray-500">
-                        Total Pembayaran
-                      </p>
+                      <p className="text-gray-500">Total Pembayaran</p>
 
                       <p className="font-bold text-2xl text-blue-600">
                         Rp
                         {item.total.toLocaleString("id-ID")}
                       </p>
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
 
         {/* Tombol */}
         <div className="flex justify-center mt-10">
-
           <Link
             href="/"
             className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold transition"
           >
             🏠 Kembali ke Home
           </Link>
-
         </div>
-
       </div>
     </main>
   );

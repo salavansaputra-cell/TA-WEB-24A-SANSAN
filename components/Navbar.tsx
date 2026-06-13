@@ -42,6 +42,12 @@ export default function Navbar() {
           </li>
 
           <li>
+            <Link href="/pesanan" className="hover:text-blue-300 transition">
+              Pesanan Saya
+            </Link>
+          </li>
+
+          <li>
             <Link
               href="/login"
               className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
@@ -85,6 +91,12 @@ export default function Navbar() {
             <li>
               <Link href="/reservasi" onClick={() => setMenuOpen(false)}>
                 Reservasi
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/pesanan" onClick={() => setMenuOpen(false)}>
+                Pesanan Saya
               </Link>
             </li>
 
