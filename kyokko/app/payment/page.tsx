@@ -22,6 +22,14 @@ export default function PaymentPage() {
     return null;
   });
 
+  if (!data) {
+    return (
+      <main className="min-h-screen flex items-center justify-center">
+        <p>Data pembayaran tidak ditemukan</p>
+      </main>
+    );
+  }
+
   return (
     <main>
       <h1>Payment Kyokko Beach</h1>
