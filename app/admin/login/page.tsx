@@ -8,5 +8,7 @@ export default function AdminLoginPage() {
 
   const [username, setUsername] = useState("");
 
+  const [password, setPassword] = useState("");
+
   return <main>Admin Login</main>;
 }
