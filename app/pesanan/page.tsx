@@ -54,5 +54,13 @@ export default function PesananPage() {
     </div>
   </main>
 );
+<div className="text-center mb-10">
+  <h1 className="text-4xl font-bold">
+    Pesanan Saya
+  </h1>
 
+  <p className="text-gray-600 mt-2">
+    Riwayat reservasi Kyokko Beach
+  </p>
+</div>
 }
