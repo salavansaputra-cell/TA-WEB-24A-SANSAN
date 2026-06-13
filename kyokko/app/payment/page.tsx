@@ -113,8 +113,26 @@ export default function PaymentPage() {
             >
               📱 QRIS
             </button>
+          </div>
 
-            {/* E-WALLET */}
+          {/* DETAIL PEMBAYARAN QRIS */}
+          {selectedMethod === "qris" && (
+            <div className="mt-6 bg-green-50 p-5 rounded-2xl text-center">
+              <h3 className="font-bold mb-4">Scan QRIS</h3>
+
+              <img
+                src="/payment/qris.png"
+                alt="QRIS"
+                className="w-60 mx-auto border rounded-xl"
+              />
+
+              <p className="text-sm text-gray-500 mt-3">
+                Scan QRIS untuk melakukan pembayaran
+              </p>
+            </div>
+          )}
+
+          {/* E-WALLET */}
             <button
               onClick={() => setSelectedMethod("ewallet")}
               className={`w-full border rounded-2xl p-4 text-left transition ${
@@ -142,7 +160,6 @@ export default function PaymentPage() {
             </div>
           )}
         </div>
-      </div>
     </main>
   );
 }
