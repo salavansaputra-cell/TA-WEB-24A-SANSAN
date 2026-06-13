@@ -51,6 +51,13 @@ export default function AdminLoginPage() {
               className="w-full border rounded-xl p-4 mt-2"
             />
           </div>
+
+          <button
+            onClick={handleLogin}
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-xl font-semibold transition"
+          >
+            Login
+          </button>
         </div>
       </div>
     </main>
