@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type ReservasiAdmin = {
   nama: string;
@@ -15,6 +16,8 @@ type ReservasiAdmin = {
 };
 
 export default function DashboardAdmin() {
+  const router = useRouter();
+
   const [reservasi] = useState<ReservasiAdmin[]>(() => {
     if (typeof window === "undefined") {
       return [];
@@ -22,6 +25,14 @@ export default function DashboardAdmin() {
 
     return JSON.parse(localStorage.getItem("adminReservasi") || "[]");
   });
+
+  useEffect(() => {
+    const login = localStorage.getItem("adminLogin");
+
+    if (login !== "true") {
+      router.push("/admin/login");
+    }
+  }, [router]);
 
   return (
     <main className="min-h-screen bg-gray-50 pt-28 px-6 pb-20">
